@@ -1,0 +1,157 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 62px;
+  margin: 0 auto;
+  color: $color-default-white;
+  z-index: 3;
+
+  .header__wrapper {
+    padding-top: 40px;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include vp-1199 {
+    min-height: 54px;
+
+    .header__wrapper {
+      padding-top: 30px;
+    }
+  }
+
+  @include vp-767 {
+    min-height: 44px;
+
+    .container {
+      flex-wrap: wrap;
+      column-gap: 25px;
+    }
+
+    .header__wrapper {
+      padding-top: 15px;
+    }
+  }
+}
+
+.header__tel {
+  display: flex;
+  align-items: center;
+  min-width: 142px;
+  height: 62px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  margin-left: 30px;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    color: $color-resolution-blue;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  @include vp-1199 {
+    min-width: 126px;
+    height: 44px;
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    min-width: 110px;
+    height: 14px;
+    font-size: 14px;
+    margin-left: auto;
+  }
+}
+
+
+.header.open-menu {
+  @include vp-1199 {
+    height: 100%;
+    background: var(--overlay-50, rgba(0, 0, 0, 0.50));
+
+    .header__wrapper {
+      background-color: $color-default-white;
+    }
+
+    ul {
+      display: block;
+    }
+
+    a {
+      color: $color-default-elephant;
+    }
+
+    .logo {
+      margin-left: 0;
+      margin-right: 7px;
+    }
+
+    .menu__toggle {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 11px;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background-image: url("../img/svg/menu-close.svg");
+      }
+    }
+  }
+
+  @include vp-767 {
+    .container {
+      column-gap: 0;
+    }
+
+    .logo {
+      height: fit-content;
+      margin-right: 0;
+    }
+
+    .header__tel {
+      position: absolute;
+      top: 42px;
+      right: 4.7%;
+    }
+
+    .menu__toggle {
+      height: 54px;
+
+      &::after {
+        top: 0;
+      }
+    }
+  }
+}
+
+.header.no-js {
+  @include vp-1199 {
+    ul {
+      margin-top: 16px;
+    }
+
+    .menu__toggle {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    ul {
+      margin-top: 8px;
+    }
+  }
+}

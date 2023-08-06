@@ -1,6 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initSwiper} from './modules/hero-swiper';
+import {initVideo} from './modules/video';
 import {Form} from './modules/form-validate/form';
+import './modules/open-menu';
 
 // ---------------------------------
 
@@ -18,6 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initSwiper();
+    initVideo();
     const form = new Form();
     window.form = form;
     form.init();

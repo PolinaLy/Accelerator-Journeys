@@ -1,30 +1,3 @@
-.wrapper {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
-
-  .header,
-  .footer {
-    flex-shrink: 0;
-  }
-
-  main {
-    flex-grow: 1;
-  }
-}
-
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -40,6 +13,12 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.disabled {
+  opacity: 0.1;
+  // color: rgba(2, 102, 193, 0.10);
+  pointer-events: none;
 }
 
 .scroll-lock-ios {
