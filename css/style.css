@@ -2311,7 +2311,7 @@ button,
 
   .training__swiper-content p {
     line-height: 145%;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   .training__swiper-process {
