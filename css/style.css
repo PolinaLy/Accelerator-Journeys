@@ -2990,7 +2990,7 @@ button,
   }
 
   .training__swiper-process {
-    padding-top: 27px;
+    padding-top: 21px;
   }
 
   .training__swiper-process h3 {
@@ -3053,13 +3053,14 @@ button,
   }
 
   .about {
-    padding: 463px 0 61px;
+    padding: 16px 0 61px;
   }
 
   .about::before {
+    position: static;
+    display: block;
     margin-left: -42px;
     margin-bottom: 44px;
-    top: 17px;
   }
 
   .about .about__wrapper {
