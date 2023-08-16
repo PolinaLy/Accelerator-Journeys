@@ -1,0 +1,22 @@
+.map {
+  width: 100%;
+  height: 324px;
+  margin-top: auto;
+
+  @include vp-1199 {
+    height: 340px;
+  }
+
+  @include vp-767 {
+    height: 320px;
+  }
+}
+
+.map .leaflet-control-container {
+  display: none;
+}
+
+.map__map-no-js img {
+  width: 100%;
+  height: auto;
+}

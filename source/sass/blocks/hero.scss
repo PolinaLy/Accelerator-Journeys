@@ -36,8 +36,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    // width: 100%;
-    // height: 100%;
+    width: 100%;
   }
 
   &::before {
@@ -48,7 +47,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0.00) 100%);
+    background: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
     z-index: 1;
   }
 
@@ -73,14 +72,17 @@
   width: 100%;
   max-width: 1200px;
   height: 100%;
-  margin: 182px auto 80px;
+  margin: 0 auto;
+  padding: 182px 0 80px;
 
   @include vp-1199 {
-    margin: 174px auto  90px;
+    margin: 0 auto;
+    padding: 174px 0 90px;
   }
 
   @include vp-767 {
-    margin: 139px auto  40px;
+    margin: 0 auto;
+    padding: 139px 0 40px;
   }
 }
 
@@ -113,6 +115,7 @@
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin: auto 0 0;
     padding: 0;
@@ -152,6 +155,9 @@
     align-items: center;
     max-width: 678px;
     text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
     h2 {
       font-size: 56px;
@@ -281,6 +287,10 @@
   width: 410px;
   min-height: 459px;
 
+  img {
+    width: 308px;
+  }
+
   @include vp-1199 {
     position: relative;
     top: 34px;
@@ -299,11 +309,12 @@
 }
 
 .hero__photo-two {
-  img:last-child {
+  img {
     right: 0;
     bottom: 0;
     top: auto;
     left: auto;
+    width: 277px;
   }
 
   @include vp-1199 {
@@ -318,6 +329,20 @@
   position: absolute;
   right: 0;
   top: 119px;
+  width: 340px;
+  height: 220px;
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  iframe {
+    border: none;
+    width: 340px;
+    height: 220px;
+  }
 
   @include vp-1199 {
     position: relative;
@@ -327,16 +352,27 @@
   @include vp-767 {
     display: none;
   }
-
 }
 
-.hero-swiper__pagination {
+.hero__audio-player-button {
+  position: absolute;
+  bottom: 42px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 47px;
+  height: 47px;
+  border: none;
+  background: transparent;
+}
+
+.hero__swiper-pagination {
   position: absolute;
   display: flex;
   justify-content: end;
   gap: 5px;
-  transition: .3s opacity;
-  transform: translate3d(0,0,0);
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
   right: 0;
   margin: 0 auto 88px;
   max-width: 1200px;

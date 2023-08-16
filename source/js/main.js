@@ -1,9 +1,17 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {initSwiper} from './modules/hero-swiper';
+import {initHeroSwiper} from './modules/hero-swiper';
 import {initVideo} from './modules/video';
+import {initAudio} from './modules/audio-player';
+import {initToursSwiper} from './modules/tours-swiper';
+import {initTrainingSwiper} from './modules/training-swiper';
+import {initReviewsSwiper} from './modules/reviews-swiper';
+import {initAdvantagesSwiper} from './modules/advantages-swiper';
+import {initPhotogallerySwiper} from './modules/photogallery-swiper';
 import {Form} from './modules/form-validate/form';
 import './modules/open-menu';
+import {initMap} from './modules/map';
+
+const mediaQuery = window.matchMedia('(min-width: 1200px)');
 
 // ---------------------------------
 
@@ -20,12 +28,20 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
-    initSwiper();
+    initHeroSwiper();
     initVideo();
+    initAudio();
+    initToursSwiper();
+    initTrainingSwiper();
+    initReviewsSwiper();
+    if (mediaQuery.matches) {
+      initAdvantagesSwiper();
+    }
+    initPhotogallerySwiper();
     const form = new Form();
     window.form = form;
     form.init();
+    initMap();
   });
 });
 

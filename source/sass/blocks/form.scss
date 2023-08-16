@@ -1,0 +1,170 @@
+.form {
+  width: 100%;
+  min-height: 800px;
+  background-image: url("../img/form/background.jpg");
+  background-color: #0a6825;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url("../img/form/background@2x.jpg");
+  }
+
+  .container {
+    padding-top: 312px;
+    text-align: center;
+    color: $color-default-white;
+  }
+
+  h2 {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0 0 38px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    width: 978px;
+    margin: 0 auto;
+  }
+
+  input {
+    width: 340px;
+    height: 64px;
+    padding: 24px 15px 24px 30px;
+    border: 1px solid $color-elephant-opasity;
+
+    font-family: $ff-montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    color: $color-default-elephant;
+
+    &::placeholder {
+      font-family: $ff-montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 100%;
+      color: $color-default-elephant;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      border-color: $color-navy-blue;
+
+      &::placeholder {
+        color: $color-navy-blue;
+        opacity: 1;
+      }
+    }
+
+    &:active,
+    &:focus-visible {
+      outline: none;
+      border-color: $color-resolution-blue;
+      cursor: pointer;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .btn {
+    &--form {
+      width: 238px;
+      min-height: 64px;
+      height: fit-content;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+  }
+
+  @include vp-1199 {
+    min-height: 679px;
+    background-position: 61% 41%;
+    background-size: 182%;
+
+    .container {
+      padding-top: 195px;
+    }
+
+    p {
+      width: 300px;
+      margin: 0 auto 28px;
+    }
+
+    form {
+      gap: 7px;
+      width: 266px;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      font-size: 14px;
+      padding: 18px 15px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+
+    .btn {
+      &--form {
+        margin-top: 8px;
+        width: 100%;
+        min-height: 58px;
+      }
+    }
+  }
+
+  @include vp-767 {
+    min-height: 621px;
+    background-image: url("../img/form/background-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/form/background.jpg");
+      background-position: center;
+    }
+
+    .container {
+      padding-top: 183px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 13px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      &--form {
+        margin-top: 0;
+        min-height: 52px;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.contacts {
+  br {
+    display: none;
+  }
+
+  h2 {
+    margin: 18px 0 22px;
+  }
+
+  p {
+    line-height: 150%;
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    margin: 0;
+    padding: 50px 0 0;
+    list-style: none;
+  }
+
+  li {
+    padding-left: 56px;
+    background-image: url("../img/svg/mail.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    &:first-of-type {
+      background-image: url("../img/svg/phone.svg");
+    }
+
+    &:last-of-type {
+      background-image: url("../img/svg/address.svg");
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 0 0 13px;
+  }
+
+  a {
+    color: $color-default-elephant;
+  }
+
+  @include vp-1199 {
+    h2 {
+      margin: 12px 0 18px;
+    }
+
+    p {
+      max-width: 483px;
+    }
+
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 44px;
+      padding-top: 40px;
+    }
+
+    li {
+      padding-left: 34px;
+      background-size: 24px 24px;
+      background-position-y: top;
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    h4 + p,
+    a {
+      font-size: 14px;
+      line-height: 157%;
+    }
+  }
+
+  @include vp-767 {
+    br {
+      display: block;
+    }
+
+    h2 {
+      margin: 4px 0 11px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 143%;
+      max-width: 100%;
+    }
+
+    ul {
+      padding-top: 30px;
+      gap: 30px;
+    }
+
+    li {
+      padding-left: 32px;
+      background-size: 22px 22px;
+      background-position-y: top;
+    }
+
+
+    h4 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    a {
+      line-height: 143%;
+    }
+  }
+}

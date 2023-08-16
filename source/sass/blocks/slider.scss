@@ -1,0 +1,56 @@
+.slider {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 0;
+    right: 0;
+    width: 37px;
+    height: 35px;
+    background-color: $color-navy-blue;
+    border: 1px solid $color-navy-blue;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 13px;
+      left: 12px;
+      bottom: 0;
+      right: 0;
+      background-image: url("../img/svg/arrow-button.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background-color: transparent;
+      border-color: $color-resolution-blue;
+
+      &::after {
+        background-image: url("../img/svg/arrow-button-hover.svg");
+      }
+    }
+
+    &:active {
+      background-color: $color-resolution-blue;
+    }
+  }
+
+  .swiper-button-prev {
+    left: auto;
+    right: 42px;
+  }
+
+  .swiper-button-next {
+    &::after {
+      bottom: 12px;
+      right: 10px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,135 @@
+.about {
+  position: relative;
+  padding: 114px 0 96px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 97px;
+    left: 0;
+    width: 808px;
+    height: 474px;
+    background-image: url("../img/about/hike.png");
+  }
+
+  @include retina {
+    &::before {
+      background-image: url("../img/about/hike@2x.png");
+      background-size: cover;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -66px;
+    right: -16%;
+    width: 840px;
+    height: 280px;
+    background-image: url("../img/about/clouds.png");
+    background-repeat: no-repeat;
+  }
+
+  .about__wrapper {
+    position: relative;
+    width: 49%;
+    margin-left: auto;
+    padding-top: 16px;
+  }
+
+  h2 {
+    margin-bottom: 56px;
+  }
+
+  ul {
+    display: grid;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 157%;
+    margin: 0;
+  }
+
+  @include vp-1199 {
+    padding: 63px 0 77px;
+
+    &::before {
+      top: 81px;
+      width: 685px;
+      height: 402px;
+      background-image: url("../img/about/hike-tablet.png");
+      background-repeat: no-repeat;
+    }
+
+    @include retina {
+      &::before {
+        background-image: url("../img/about/hike-tablet@2x.png");
+        background-size: contain;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    br {
+      display: none;
+    }
+
+    h2 {
+      margin-bottom: 35px;
+    }
+
+    ul {
+      gap: 28px;
+    }
+
+    .about__wrapper {
+      width: 48%;
+      padding-top: 11px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 16px 0 61px;
+
+    &::before {
+      position: static;
+      display: block;
+      margin-left: -42px;
+      margin-bottom: 44px;
+    }
+
+    .about__wrapper {
+      width: 100%;
+      padding-top: 3px;
+    }
+
+    h2 {
+      margin-bottom: 32px;
+    }
+
+    ul {
+      margin: 0;
+      gap: 32px;
+    }
+
+    li:first-of-type {
+      padding-bottom: 12px;
+    }
+
+    p {
+      line-height: 143%;
+    }
+  }
+}

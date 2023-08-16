@@ -1,0 +1,46 @@
+.social {
+  margin-bottom: 20px;
+
+  ul {
+    display: flex;
+    gap: 15px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  @include vp-767 {
+    ul {
+      margin-left: 5px;
+    }
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(45, 56, 63, 0.4);
+
+  svg {
+    fill: $color-default-elephant;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border-color: $color-default-elephant;
+  }
+
+  &:active {
+    background-color: $color-navy-blue;
+    border-color: transparent;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+}
