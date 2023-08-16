@@ -899,7 +899,7 @@ button,
   background-image: url("../img/svg/moon-tour.svg");
 }
 
-.tours__swiper-content h3 {
+.tours__swiper-content ul + h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 116%;
@@ -2309,6 +2309,7 @@ button,
 
   .training__swiper-content p {
     line-height: 145%;
+    margin: 0;
   }
 
   .training__swiper-process {
@@ -2377,8 +2378,10 @@ button,
     top: 81px;
     width: 685px;
     height: 402px;
-    background-image: url("../img/about/hike-tablet.png");
+    background-image: -webkit-image-set(url("../img/about/hike-tablet.png") 1x, url("../img/about/hike-tablet@2x.png"));
+    background-image: image-set(url("../img/about/hike-tablet.png") 1x, url("../img/about/hike-tablet@2x.png"));
     background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .about::after {
@@ -2670,13 +2673,6 @@ button,
   }
 }
 
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
-  .about::before {
-    background-image: url("../img/about/hike-tablet@2x.png");
-    background-size: contain;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     padding: 0 4.7%;
@@ -2906,7 +2902,7 @@ button,
     padding-bottom: 25px;
   }
 
-  .tours__swiper-content h3 {
+  .tours__swiper-content ul + h3 {
     margin: 16px 0;
     font-size: 20px;
   }
@@ -2986,10 +2982,6 @@ button,
 
   .training__swiper-img img {
     width: 100%;
-  }
-
-  .training__swiper-content p {
-    margin: 0;
   }
 
   .training__swiper-name a {
