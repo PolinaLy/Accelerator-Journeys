@@ -10,14 +10,9 @@
     left: 0;
     width: 808px;
     height: 474px;
-    background-image: url("../img/about/hike.png");
-  }
-
-  @include retina {
-    &::before {
-      background-image: url("../img/about/hike@2x.png");
-      background-size: cover;
-    }
+    background-image: image-set(url("../img/about/hike.png") 1x,
+    url("../img/about/hike@2x.png"));
+    background-size: cover;
   }
 
   &::after {
@@ -67,15 +62,10 @@
       top: 81px;
       width: 685px;
       height: 402px;
-      background-image: url("../img/about/hike-tablet.png");
+      background-image: image-set(url("../img/about/hike-tablet.png") 1x,
+    url("../img/about/hike-tablet@2x.png"));
       background-repeat: no-repeat;
-    }
-
-    @include retina {
-      &::before {
-        background-image: url("../img/about/hike-tablet@2x.png");
-        background-size: contain;
-      }
+      background-size: contain;
     }
 
     &::after {
