@@ -1283,12 +1283,11 @@ button,
   margin-top: auto;
 }
 
-.reviews__swiper-content span {
-  position: relative;
-  opacity: 1;
+.reviews__swiper-content p:last-of-type {
   font-size: 12px;
   font-weight: 300;
   line-height: 100%;
+  margin: 0;
 }
 
 .advantages {
@@ -3124,15 +3123,7 @@ button,
   }
 
   .reviews__swiper-content {
-    padding: 0 0 8px;
-  }
-
-  .reviews__swiper-content h4 {
-    margin-bottom: 0;
-  }
-
-  .reviews__swiper-content span {
-    font-size: 12px;
+    padding: 0;
   }
 
   .advantages {
