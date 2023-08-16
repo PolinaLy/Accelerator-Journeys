@@ -2278,7 +2278,7 @@ button,
   }
 
   .training h3 {
-    margin-bottom: 32px;
+    margin: 32px 0;
   }
 
   .training__swiper {
@@ -2290,7 +2290,7 @@ button,
   }
 
   .training__swiper-wrapper {
-    margin-bottom: 38px;
+    margin-bottom: 6px;
   }
 
   .training__swiper-slide-container {
