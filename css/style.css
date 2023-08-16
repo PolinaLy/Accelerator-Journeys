@@ -2996,6 +2996,7 @@ button,
   .training__swiper-process h3 {
     margin-left: 4px;
     margin-bottom: 28px;
+    margin-top: 6px;
   }
 
   .training__swiper-process ul {
@@ -3052,14 +3053,13 @@ button,
   }
 
   .about {
-    padding: 16px 0 61px;
+    padding: 463px 0 61px;
   }
 
   .about::before {
-    position: static;
-    display: block;
     margin-left: -42px;
     margin-bottom: 44px;
+    top: 17px;
   }
 
   .about .about__wrapper {
@@ -3215,6 +3215,7 @@ button,
 
   .form h2 {
     margin-bottom: 13px;
+    max-width: 100%;
   }
 
   .form p {
