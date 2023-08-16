@@ -2690,9 +2690,12 @@ button,
   .header .container {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-column-gap: 25px;
-    -moz-column-gap: 25px;
-    column-gap: 25px;
+    -webkit-column-gap: 140px;
+    -moz-column-gap: 140px;
+    column-gap: 140px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .header .header__wrapper {
@@ -2984,6 +2987,14 @@ button,
 
   .training__swiper-img img {
     width: 100%;
+  }
+
+  .training__swiper-content p {
+    margin: 0;
+  }
+
+  .training__swiper-content span {
+    font-size: 12px;
   }
 
   .training__swiper-name a {
@@ -3328,6 +3339,14 @@ button,
   .custom-input__label,
   .custom-textarea__label {
     margin: 0 0 18px 0;
+  }
+}
+
+@media (max-width: 579px) {
+  .header .container {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
 }
 
