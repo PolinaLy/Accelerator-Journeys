@@ -1067,7 +1067,7 @@ button,
   margin-top: 18px;
 }
 
-.training__swiper-content p {
+.training__swiper-content .training__swiper-name + p {
   font-size: 12px;
   line-height: 133%;
   margin: 0;
@@ -2309,9 +2309,8 @@ button,
     margin-top: 16px;
   }
 
-  .training__swiper-content p {
+  .training__swiper-content .training__swiper-name + p {
     line-height: 145%;
-    margin-bottom: 0;
   }
 
   .training__swiper-process {
