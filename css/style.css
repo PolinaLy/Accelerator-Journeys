@@ -2993,10 +2993,6 @@ button,
     margin: 0;
   }
 
-  .training__swiper-content span {
-    font-size: 12px;
-  }
-
   .training__swiper-name a {
     margin-right: 12px;
   }
@@ -3133,6 +3129,10 @@ button,
 
   .reviews__swiper-content h4 {
     margin-bottom: 0;
+  }
+
+  .reviews__swiper-content span {
+    font-size: 12px;
   }
 
   .advantages {
