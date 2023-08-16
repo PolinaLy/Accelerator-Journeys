@@ -1174,7 +1174,9 @@ button,
   left: 0;
   width: 808px;
   height: 474px;
-  background-image: url("../img/about/hike.png");
+  background-image: -webkit-image-set(url("../img/about/hike.png") 1x, url("../img/about/hike@2x.png"));
+  background-image: image-set(url("../img/about/hike.png") 1x, url("../img/about/hike@2x.png"));
+  background-size: contain;
 }
 
 .about::after {
@@ -2381,7 +2383,6 @@ button,
     background-image: -webkit-image-set(url("../img/about/hike-tablet.png") 1x, url("../img/about/hike-tablet@2x.png"));
     background-image: image-set(url("../img/about/hike-tablet.png") 1x, url("../img/about/hike-tablet@2x.png"));
     background-repeat: no-repeat;
-    background-size: contain;
   }
 
   .about::after {
@@ -3342,11 +3343,6 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .tours::after {
     background-image: url("../img/tours/big-clouds@2x.png");
-    background-size: cover;
-  }
-
-  .about::before {
-    background-image: url("../img/about/hike@2x.png");
     background-size: cover;
   }
 
