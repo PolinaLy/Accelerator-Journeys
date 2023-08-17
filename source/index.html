@@ -8,9 +8,6 @@
     <title>Путешествия</title>
     <link rel="icon" href="favicon/favicon.ico">
     <link rel="icon" type="image/svg+xml" sizes="32x32" href="./img/favicon/favicon32.svg">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
   </head>
@@ -141,7 +138,7 @@
                         <use href="img/sprite.svg#audio-poster"></use>
                       </svg>
                       <button type="button" class="hero__audio-player-button"></button>
-                      <iframe class="visually-hidden" frameborder="0" width="340" height="220" src="https://music.yandex.ru/iframe/#album/25474374">Слушайте <a href='https://music.yandex.ru/album/25474374'>Про код</a> на Яндекс Музыке</iframe>
+                      <iframe class="visually-hidden" width="340" height="220" src="https://music.yandex.ru/iframe/#album/25474374"></iframe>
                   </div>
                   <ul>
                     <li>8 дней/7 ночей</li>
@@ -156,20 +153,22 @@
       </section>
 
       <section class="tours" id="tours">
-        <div class="container title">
+        <div class="container">
           <div class="tours__slider slider">
             <div class="tours__swiper swiper">
-              <span>Ближайшие туры</span>
-              <h2>Ближайшие туры</h2>
-              <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+              <div class="title">
+                <span>Ближайшие туры</span>
+                <h2>Ближайшие туры</h2>
+              </div>
+              <button class="slider-button slider-button--prev swiper-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="slider__button slider__button--next swiper-button-next" type="button">
+              <button class="slider-button slider-button--next swiper-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
               <div class="tours__swiper-wrapper swiper-wrapper">
                 <!-- Slides -->
-                <div class="tours__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="tours__swiper-slide slider__slide swiper-slide">
                   <div class="tours__swiper-img">
                     <picture>
                       <source type="image/webp" srcset="./img/tours/elbrus.webp 1x, ./img/tours/elbrus@2x.webp 2x" width="380" height="412">
@@ -204,7 +203,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="tours__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="tours__swiper-slide slider__slide swiper-slide">
                   <div class="tours__swiper-img">
                     <picture>
                       <source type="image/webp" srcset="./img/tours/belukha.webp 1x, ./img/tours/belukha@2x.webp 2x" width="380" height="412">
@@ -239,7 +238,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="tours__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="tours__swiper-slide slider__slide swiper-slide">
                   <div class="tours__swiper-img">
                     <picture>
                       <source type="image/webp" srcset="./img/tours/fisht.webp 1x, ./img/tours/fisht@2x.webp 2x" width="380" height="412">
@@ -274,7 +273,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="tours__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="tours__swiper-slide slider__slide swiper-slide">
                   <div class="tours__swiper-img">
                     <picture>
                       <source type="image/webp" srcset="./img/tours/elbrus.webp 1x, ./img/tours/elbrus@2x.webp 2x" width="380" height="412">
@@ -321,27 +320,29 @@
         </div>
       </section>
 
-      <section class="training title" id="training">
+      <section class="training" id="training">
         <div class="container">
           <div class="training__slider slider">
             <div class="training__swiper swiper">
-              <span>Обучение</span>
-              <h2>Обучение</h2>
+              <div class="title">
+                <span>Обучение</span>
+                <h2>Обучение</h2>
+              </div>
               <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса,
                 Алтая, Карелии, Адыгеи и&nbsp;других.
               </p>
               <div class="training__title">
                 <h3>Наши инструкторы</h3>
-                <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+                <button class="slider-button slider-button--prev swiper-button-prev" type="button">
                   <span class="visually-hidden">Предыдущий слайд</span>
                 </button>
-                <button class="slider__button slider__button--next swiper-button-next" type="button">
+                <button class="slider-button slider-button--next swiper-button-next" type="button">
                   <span class="visually-hidden">Следующий слайд</span>
                 </button>
               </div>
               <div class="training__swiper-wrapper swiper-wrapper">
                 <!-- Slides -->
-                <div class="training__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="training__swiper-slide slider__slide swiper-slide">
                   <div class="training__swiper-slide-container">
                     <div class="training__swiper-img">
                       <picture>
@@ -363,7 +364,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="training__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="training__swiper-slide slider__slide swiper-slide">
                   <div class="training__swiper-slide-container">
                     <div class="training__swiper-img">
                       <picture>
@@ -385,7 +386,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="training__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="training__swiper-slide slider__slide swiper-slide">
                   <div class="training__swiper-slide-container">
                     <div class="training__swiper-img">
                       <picture>
@@ -407,7 +408,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="training__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="training__swiper-slide slider__slide swiper-slide">
                   <div class="training__swiper-slide-container">
                     <div class="training__swiper-img">
                       <picture>
@@ -429,7 +430,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="training__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="training__swiper-slide slider__slide swiper-slide">
                   <div class="training__swiper-slide-container">
                     <div class="training__swiper-img">
                       <picture>
@@ -477,45 +478,45 @@
         </div>
       </section>
 
-      <section class="about title" id="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__wrapper">
-            <span>О нас</span>
-            <h2>О нас</h2>
-            <ul>
-              <li>
-                <h3>История компании</h3>
-                <p>В&nbsp;далеком 2000 году мы&nbsp;начали заниматься туризмом&nbsp;- походы, поездки, восхождения, нам это настолько понравилось,
-                  что мы этим стали жить. <br>Спустя 5&nbsp;лет, в&nbsp;2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.
-                </p>
-              </li>
-              <li>
-                <h3>Наша цель</h3>
-                <p>Подарить вам незабываемые впечатления от&nbsp;похода в&nbsp;горы. Мы берем на&nbsp;себя все организационные вопросы.
-                  При организации мы обязательно учтем все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в&nbsp;приятной компании.
-                </p>
-              </li>
-            </ul>
+            <div class="title">
+              <span>О нас</span>
+              <h2>О нас</h2>
+            </div>
+            <div class="about__content">
+              <h3>История компании</h3>
+              <p>В&nbsp;далеком 2000 году мы&nbsp;начали заниматься туризмом&nbsp;- походы, поездки, восхождения, нам это настолько понравилось,
+                что мы этим стали жить. <br>Спустя 5&nbsp;лет, в&nbsp;2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.
+              </p>
+              <h3>Наша цель</h3>
+              <p>Подарить вам незабываемые впечатления от&nbsp;похода в&nbsp;горы. Мы берем на&nbsp;себя все организационные вопросы.
+                При организации мы обязательно учтем все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в&nbsp;приятной компании.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="reviews title" id="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <div class="reviews__slider slider">
             <div class="reviews__swiper swiper">
-              <span>Отзывы</span>
-              <h2>Отзывы</h2>
+              <div class="title">
+                <span>Отзывы</span>
+                <h2>Отзывы</h2>
+              </div>
               <h3 class="visually-hidden">Отзывы наших клиентов</h3>
-              <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+              <button class="slider-button slider-button--prev swiper-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="slider__button slider__button--next swiper-button-next" type="button">
+              <button class="slider-button slider-button--next swiper-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
                 <div class="reviews__swiper-wrapper swiper-wrapper">
                 <!-- Slides -->
-                <div class="reviews__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="reviews__swiper-slide slider__slide swiper-slide">
                   <div class="reviews__swiper-slide-container">
                     <div class="reviews__swiper-img">
                       <picture>
@@ -539,7 +540,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="reviews__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="reviews__swiper-slide slider__slide swiper-slide">
                   <div class="reviews__swiper-slide-container">
                     <div class="reviews__swiper-img">
                       <picture>
@@ -562,7 +563,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="reviews__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="reviews__swiper-slide slider__slide swiper-slide">
                   <div class="reviews__swiper-slide-container">
                     <div class="reviews__swiper-img">
                       <picture>
@@ -584,7 +585,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="reviews__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="reviews__swiper-slide slider__slide swiper-slide">
                   <div class="reviews__swiper-slide-container">
                     <div class="reviews__swiper-img">
                       <picture>
@@ -613,16 +614,18 @@
         </div>
       </section>
 
-      <section class="advantages title">
+      <section class="advantages">
         <div class="container">
           <div class="advantages__slider slider">
             <div class="advantages__swiper swiper">
-              <span>Преимущества</span>
-              <h2>Преимущества</h2>
+              <div class="title">
+                <span>Преимущества</span>
+                <h2>Преимущества</h2>
+              </div>
               <h3 class="visually-hidden">Преимущества организации LIFETOUR.</h3>
               <div class="advantages__swiper-wrapper swiper-wrapper">
                 <!-- Slides -->
-                <div class="advantages__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="advantages__swiper-slide slider__slide swiper-slide">
                   <div class="advantages__swiper-slide-container advantages__swiper-slide-container--safety">
                     <h4>Безопасность и охрана</h4>
                     <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности. Имеем планы действий на&nbsp;случай непредвиденных
@@ -630,7 +633,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="advantages__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="advantages__swiper-slide slider__slide swiper-slide">
                   <div class="advantages__swiper-slide-container advantages__swiper-slide-container--expertise">
                     <h4>Экспертиза и знания</h4>
                     <p>Наша команда опытных гидов имеет обширные знания о&nbsp;местности, погодных условиях и&nbsp;технике безопасности. Это гарантирует, что наши клиенты
@@ -638,7 +641,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="advantages__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="advantages__swiper-slide slider__slide swiper-slide">
                   <div class="advantages__swiper-slide-container advantages__swiper-slide-container--equipment">
                     <h4>Оборудование и снаряжение</h4>
                     <p>Мы&nbsp;предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от&nbsp;необходимости покупать,
@@ -646,7 +649,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="advantages__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="advantages__swiper-slide slider__slide swiper-slide">
                   <div class="advantages__swiper-slide-container advantages__swiper-slide-container--routes">
                     <h4>Индивидуальные маршруты</h4>
                     <p>Предлагает широкий выбор туров, отвечающих различным уровням мастерства и&nbsp;интересам. Мы&nbsp;также можем адаптировать маршруты к&nbsp;вашим
@@ -654,7 +657,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="advantages__swiper-slide slider__slide swiper-slide" tabindex="0">
+                <div class="advantages__swiper-slide slider__slide swiper-slide">
                   <div class="advantages__swiper-slide-container advantages__swiper-slide-container--nature">
                     <h4>Бережное отношение к&nbsp;природе</h4>
                     <p>Уделяем первостепенное внимание охране окружающей среды и&nbsp;гарантируем, что туры оказывают минимальное воздействие на&nbsp;природную среду.
@@ -663,10 +666,10 @@
                   </div>
                 </div>
               </div>
-              <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+              <button class="slider-button slider-button--prev swiper-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="slider__button slider__button--next swiper-button-next" type="button">
+              <button class="slider-button slider-button--next swiper-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </div>
@@ -674,32 +677,34 @@
         </div>
       </section>
 
-      <section class="photogallery title" id="photogallery">
+      <section class="photogallery" id="photogallery">
         <div class="photogallery__slider slider">
           <div class="photogallery__swiper swiper">
             <div class="container">
-              <span>Фотогалерея</span>
-              <h2>Фотогалерея</h2>
+              <div class="title">
+                <span>Фотогалерея</span>
+                <h2>Фотогалерея</h2>
+              </div>
               <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас на&nbsp;фото.
                 Лучшие фотографии украсят этот раздел нашего сайта.
               </p>
-              <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+              <button class="slider-button slider-button--prev swiper-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="slider__button slider__button--next swiper-button-next" type="button">
+              <button class="slider-button slider-button--next swiper-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </div>
             <div class="photogallery__swiper-wrapper swiper-wrapper">
               <!-- Slides -->
-              <div class="photogallery__swiper-slide slider__slide swiper-slide" tabindex="0">
+              <div class="photogallery__swiper-slide slider__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/photogallery/slide1-1.webp 1x, ./img/photogallery/slide1-1@2x.webp 2x" width="275" height="449">
+                  <img src="./img/photogallery/slide1-1.jpg" srcset="./img/photogallery/slide1-1@2x.jpg 2x" width="275" height="449" alt="Покорение вершин.">
+                </picture>
+              </div>
+              <div class="photogallery__swiper-slide slider__slide swiper-slide">
                 <ul>
-                  <li>
-                    <picture>
-                      <source type="image/webp" srcset="./img/photogallery/slide1-1.webp 1x, ./img/photogallery/slide1-1@2x.webp 2x" width="275" height="449">
-                      <img src="./img/photogallery/slide1-1.jpg" srcset="./img/photogallery/slide1-1@2x.jpg 2x" width="275" height="449" alt="Покорение вершин.">
-                    </picture>
-                  </li>
                   <li>
                     <picture>
                       <source type="image/webp" srcset="./img/photogallery/slide1-2.webp 1x, ./img/photogallery/slide1-2@2x.webp 2x" width="298" height="179">
@@ -714,14 +719,16 @@
                   </li>
                 </ul>
               </div>
-              <div class="photogallery__swiper-slide slider__slide swiper-slide" tabindex="0">
+
+
+              <div class="photogallery__swiper-slide slider__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/photogallery/slide2-1.webp 1x, ./img/photogallery/slide2-1@2x.webp 2x" width="275" height="449">
+                  <img src="./img/photogallery/slide2-1.jpg" srcset="./img/photogallery/slide2-1@2x.jpg 2x" width="275" height="449" alt="Походы по тропам.">
+                </picture>
+              </div>
+              <div class="photogallery__swiper-slide slider__slide swiper-slide">
                 <ul>
-                  <li>
-                    <picture>
-                      <source type="image/webp" srcset="./img/photogallery/slide2-1.webp 1x, ./img/photogallery/slide2-1@2x.webp 2x" width="275" height="449">
-                      <img src="./img/photogallery/slide2-1.jpg" srcset="./img/photogallery/slide2-1@2x.jpg 2x" width="275" height="449" alt="Походы по тропам.">
-                    </picture>
-                  </li>
                   <li>
                     <picture>
                       <source type="image/webp" srcset="./img/photogallery/slide2-2.webp 1x, ./img/photogallery/slide2-2@2x.webp 2x" width="298" height="179">
@@ -736,14 +743,16 @@
                   </li>
                 </ul>
               </div>
-              <div class="photogallery__swiper-slide slider__slide swiper-slide" tabindex="0">
+
+
+              <div class="photogallery__swiper-slide slider__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/photogallery/slide3-1.webp 1x, ./img/photogallery/slide3-1@2x.webp 2x" width="275" height="449">
+                  <img src="./img/photogallery/slide3-1.jpg" srcset="./img/photogallery/slide3-1@2x.jpg 2x" width="275" height="449" alt="Прием пищи на природе.">
+                </picture>
+              </div>
+              <div class="photogallery__swiper-slide slider__slide swiper-slide">
                 <ul>
-                  <li>
-                    <picture>
-                      <source type="image/webp" srcset="./img/photogallery/slide3-1.webp 1x, ./img/photogallery/slide3-1@2x.webp 2x" width="275" height="449">
-                      <img src="./img/photogallery/slide3-1.jpg" srcset="./img/photogallery/slide3-1@2x.jpg 2x" width="275" height="449" alt="Прием пищи на природе.">
-                    </picture>
-                  </li>
                   <li>
                     <picture>
                       <source type="image/webp" srcset="./img/photogallery/slide1-2.webp 1x, ./img/photogallery/slide1-2@2x.webp 2x" width="298" height="179">
@@ -781,9 +790,11 @@
 
       <section class="contacts-map">
         <div class="container">
-          <div class="contacts title" id="contacts">
-            <span>Контакты</span>
-            <h2>Контакты</h2>
+          <div class="contacts" id="contacts">
+            <div class="title">
+              <span>Контакты</span>
+              <h2>Контакты</h2>
+            </div>
             <p>Свяжитесь с&nbsp;нами любым удобным для&nbsp;вас способом или приходите к&nbsp;нам&nbsp;в&nbsp;гости. Мы&nbsp;будем рады поделиться увлекательными историями
               и&nbsp;подобрать для вас тур.
             </p>
@@ -870,8 +881,6 @@
       <p>Политика конфиденциальности</p>
     </div>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

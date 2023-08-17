@@ -1,8 +1,8 @@
 export const initAdvantagesSwiper = function () {
   new Swiper('.advantages__swiper', {
     navigation: {
-      nextEl: '.advantages__swiper .slider__button--next',
-      prevEl: '.advantages__swiper .slider__button--prev',
+      nextEl: '.advantages__swiper .slider-button--next',
+      prevEl: '.advantages__swiper .slider-button--prev',
     },
     // отключение скролла
     simulateTouch: false,

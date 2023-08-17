@@ -1,13 +1,9 @@
 export const initReviewsSwiper = function () {
   new Swiper('.reviews__swiper', {
     navigation: {
-      nextEl: '.reviews__swiper .slider__button--next',
-      prevEl: '.reviews__swiper .slider__button--prev',
+      nextEl: '.reviews__swiper .slider-button--next',
+      prevEl: '.reviews__swiper .slider-button--prev',
     },
-    // // Задает класс активным слайдам
-    // watchSlidesProgress: true,
-    // // Задаем класс активным слайдам
-    // slideVisibleClass: 'slider__slide--visible',
     // отключение скролла
     simulateTouch: false,
 

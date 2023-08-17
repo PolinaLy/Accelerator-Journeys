@@ -1,8 +1,8 @@
 export const initPhotogallerySwiper = function () {
   new Swiper('.photogallery__swiper', {
     navigation: {
-      nextEl: '.photogallery__swiper .slider__button--next',
-      prevEl: '.photogallery__swiper .slider__button--prev',
+      nextEl: '.photogallery__swiper .slider-button--next',
+      prevEl: '.photogallery__swiper .slider-button--prev',
     },
     // отключение скролла
     simulateTouch: false,
@@ -12,11 +12,11 @@ export const initPhotogallerySwiper = function () {
         slidesPerView: 1,
       },
       768: {
-        slidesPerView: 1.326,
+        slidesPerView: 2.75,
         spaceBetween: 5,
       },
       1200: {
-        slidesPerView: 2.48,
+        slidesPerView: 5,
         spaceBetween: 5,
       },
     },

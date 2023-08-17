@@ -13,21 +13,24 @@ const outsideHeaderClick = (evt) => {
 header.classList.remove('no-js');
 header.classList.remove('open-menu');
 
-menuButton.addEventListener('click', function () {
-  header.classList.toggle('open-menu');
+if (document.querySelector('.menu') && menuButton) {
+  menuButton.addEventListener('click', function () {
+    header.classList.toggle('open-menu');
 
-  if (header.classList.contains('open-menu')) {
-    body.style.position = 'fixed';
+    if (header.classList.contains('open-menu')) {
+      body.style.position = 'fixed';
 
-    header.addEventListener('click', outsideHeaderClick);
+      header.addEventListener('click', outsideHeaderClick);
 
-    linkHeader.forEach((el) => {
-      el.addEventListener('click', () => {
-        header.classList.remove('open-menu');
-        body.style.position = 'inherit';
+      linkHeader.forEach((el) => {
+        el.addEventListener('click', () => {
+          header.classList.remove('open-menu');
+          body.style.position = 'inherit';
+        });
       });
-    });
-  } else {
-    body.style.position = 'inherit';
-  }
-});
+    } else {
+      body.style.position = 'inherit';
+    }
+  });
+}
+

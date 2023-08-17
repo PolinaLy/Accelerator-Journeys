@@ -1,8 +1,8 @@
 export const initTrainingSwiper = function () {
   new Swiper('.training__swiper', {
     navigation: {
-      nextEl: '.training__swiper .slider__button--next',
-      prevEl: '.training__swiper .slider__button--prev',
+      nextEl: '.training__swiper .slider-button--next',
+      prevEl: '.training__swiper .slider-button--prev',
     },
     // Задает класс активным слайдам
     watchSlidesProgress: true,

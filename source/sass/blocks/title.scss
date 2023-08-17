@@ -19,19 +19,6 @@
     line-height: 100%;
   }
 
-  h3 {
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 100%;
-    margin: 0;
-  }
-
-  h4 {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 114%;
-  }
-
   @include vp-1199 {
     span {
       font-size: 40px;
@@ -39,10 +26,6 @@
 
     h2 {
       font-size: 25px;
-    }
-
-    h3 {
-      font-size: 18px;
     }
   }
 
@@ -54,10 +37,6 @@
     h2 {
       font-size: 22px;
       max-width: 54%;
-    }
-
-    h3 {
-      font-size: 16px;
     }
   }
 }

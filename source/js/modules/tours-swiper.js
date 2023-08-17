@@ -1,8 +1,8 @@
 export const initToursSwiper = function () {
   new Swiper('.tours__swiper', {
     navigation: {
-      nextEl: '.tours__swiper .slider__button--next',
-      prevEl: '.tours__swiper .slider__button--prev',
+      nextEl: '.tours__swiper .slider-button--next',
+      prevEl: '.tours__swiper .slider-button--prev',
     },
     // Задает класс активным слайдам
     watchSlidesProgress: true,

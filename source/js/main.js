@@ -9,6 +9,7 @@ import {initAdvantagesSwiper} from './modules/advantages-swiper';
 import {initPhotogallerySwiper} from './modules/photogallery-swiper';
 import {Form} from './modules/form-validate/form';
 import './modules/open-menu';
+import './modules/leaflet';
 import {initMap} from './modules/map';
 
 const mediaQuery = window.matchMedia('(min-width: 1200px)');
