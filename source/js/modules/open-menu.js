@@ -33,4 +33,3 @@ if (document.querySelector('.menu') && menuButton) {
     }
   });
 }
-
