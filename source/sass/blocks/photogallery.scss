@@ -5,12 +5,12 @@
 
   .container {
     position: relative;
-    padding-top: 17px;
     margin-bottom: 44px;
   }
 
   h2 {
     margin-bottom: 24px;
+    padding-top: 17px;
   }
 
   p {
@@ -27,15 +27,14 @@
   }
 
   @include vp-1199 {
-    padding-top: 75px;
+    padding-top: 0;
 
     .container {
-      padding-top: 12px;
       margin-bottom: 36px;
     }
 
-    span {
-      left: 5.86%;
+    h2 {
+      padding-top: 12px;
     }
 
     .swiper-button-next,
@@ -59,10 +58,7 @@
   }
 
   @include vp-767 {
-    padding-top: 65px;
-
     .container {
-      padding-top: 3px;
       padding-bottom: 50px;
       margin-bottom: 14px;
     }
@@ -82,6 +78,7 @@
 
     h2 {
       margin-bottom: 14px;
+      padding-top: 4px;
     }
 
     p {

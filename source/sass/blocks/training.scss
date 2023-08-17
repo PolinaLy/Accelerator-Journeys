@@ -8,6 +8,7 @@
 
   h2 {
     margin-bottom: 32px;
+    padding-top: 16px;
   }
 
   h3 {
@@ -23,6 +24,7 @@
     h2 {
       margin-left: 0;
       margin-bottom: 21px;
+      padding-top: 12px;
     }
 
     h3 {
@@ -36,6 +38,7 @@
 
     h2 {
       margin-bottom: 16px;
+      padding-top: 0;
     }
 
     h3 {
@@ -46,7 +49,7 @@
 }
 
 .training__swiper {
-  padding: 18px 0 4px;
+  padding: 2px 0 4px;
 
   p {
     line-height: 150%;
@@ -55,7 +58,7 @@
   }
 
   @include vp-1199 {
-    padding-top: 13px;
+    padding-top: 0;
 
     p {
       max-width: 560px;
@@ -269,6 +272,7 @@
 
     ul {
       grid-template-columns: 52% 48%;
+      grid-auto-flow: column;
       gap: 55px;
       column-gap: 0;
     }
@@ -299,8 +303,14 @@
         top: -7px;
       }
 
+      &:nth-child(4n+1),
+      &:nth-child(4n) {
+        grid-column: 1/2;
+      }
+
+      &:nth-child(4n+2),
       &:nth-child(4n+3) {
-        order: 1;
+        grid-column: 2/3;
       }
 
       &:nth-child(4n) {
@@ -365,8 +375,11 @@
         left: -7px;
       }
 
+      &:nth-child(4n+1),
+      &:nth-child(4n),
+      &:nth-child(4n+2),
       &:nth-child(4n+3) {
-        order: 0;
+        grid-column: 1/2;
       }
     }
 

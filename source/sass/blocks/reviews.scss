@@ -1,12 +1,19 @@
 .reviews {
   overflow: hidden;
+  padding-top: 8px;
 
   h2 {
     margin-bottom: 27px;
+    padding-top: 17px;
   }
 
   @include vp-1199 {
+    padding-top: 0;
     padding-bottom: 20px;
+
+    h2 {
+      padding-top: 13px;
+    }
   }
 
   @include vp-767 {
@@ -18,7 +25,6 @@
 }
 
 .reviews__swiper {
-  padding-top: 26px;
   overflow: inherit;
 
   .swiper-button-next,
@@ -27,8 +33,6 @@
   }
 
   @include vp-1199 {
-    padding-top: 13px;
-
     .swiper-button-next,
     .swiper-button-prev {
       top: 22px;

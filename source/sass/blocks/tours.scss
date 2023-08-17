@@ -33,7 +33,7 @@
 
   @include vp-1199 {
     overflow-x: clip;
-    padding: 75px 0 34px;
+    padding: 76px 0 34px;
 
     &::before {
       display: none;
@@ -70,7 +70,8 @@
   }
 
   h2 {
-    margin: 15px 0 55px;
+    margin: 0 0 55px;
+    padding-top: 15px;
   }
 
   @include vp-1199 {
@@ -82,7 +83,8 @@
     }
 
     h2 {
-      margin: 12px 0 43px -7px;
+      margin: 0 0 43px -7px;
+      padding-top: 12px;
     }
   }
 
@@ -90,7 +92,8 @@
     padding: 1px 0 15px;
 
     h2 {
-      margin: 4px 0 27px;
+      margin: 0 0 27px;
+      padding-top: 4px;
     }
   }
 }

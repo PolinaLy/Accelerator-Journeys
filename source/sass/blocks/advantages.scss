@@ -43,7 +43,7 @@
 
 .advantages__swiper {
   overflow: inherit;
-  padding: 17px 0 86px;
+  padding: 0 0 86px;
 
   span {
     left: 0;
@@ -55,6 +55,7 @@
   h2 {
     text-align: center;
     margin-bottom: 46px;
+    padding-top: 17px;
   }
 
   .swiper-button-next,
@@ -73,20 +74,25 @@
   }
 
   @include vp-1199 {
-    padding: 12px 0 0;
+    padding-bottom: 75px;
 
     .swiper-button-next,
     .swiper-button-prev {
       display: none;
     }
+
+    h2 {
+      padding-top: 12px;
+    }
   }
 
   @include vp-767 {
-    padding-top: 4px;
+    padding-bottom: 64px;
 
     h2 {
       max-width: 100%;
       margin-bottom: 30px;
+      padding-top: 4px;
     }
   }
 }

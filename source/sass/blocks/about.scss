@@ -28,6 +28,7 @@
 
   h2 {
     margin-bottom: 56px;
+    padding-top: 17px;
   }
 
   h3 {
@@ -70,6 +71,7 @@
 
     h2 {
       margin-bottom: 35px;
+      padding-top: 11px;
     }
 
     h3 {
@@ -93,6 +95,7 @@
 
     h2 {
       margin-bottom: 32px;
+      padding-top: 3px;
     }
 
     h3 {
@@ -111,16 +114,13 @@
   position: relative;
   width: 49%;
   margin-left: auto;
-  padding-top: 16px;
 
   @include vp-1199 {
     width: 48%;
-    padding-top: 11px;
   }
 
   @include vp-767 {
     width: 100%;
-    padding-top: 3px;
   }
 }
 
