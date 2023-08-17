@@ -1805,7 +1805,8 @@ button.swiper-pagination-bullet {
 }
 
 .tours__swiper h2 {
-  margin: 15px 0 55px;
+  margin: 0 0 55px;
+  padding-top: 15px;
 }
 
 .tours__swiper-slide {
@@ -1999,6 +2000,7 @@ button.swiper-pagination-bullet {
 
 .training h2 {
   margin-bottom: 32px;
+  padding-top: 16px;
 }
 
 .training h3 {
@@ -2009,7 +2011,7 @@ button.swiper-pagination-bullet {
 }
 
 .training__swiper {
-  padding: 18px 0 4px;
+  padding: 2px 0 4px;
 }
 
 .training__swiper p {
@@ -2201,6 +2203,7 @@ button.swiper-pagination-bullet {
 
 .about h2 {
   margin-bottom: 56px;
+  padding-top: 17px;
 }
 
 .about h3 {
@@ -2224,7 +2227,6 @@ button.swiper-pagination-bullet {
   position: relative;
   width: 49%;
   margin-left: auto;
-  padding-top: 16px;
 }
 
 .about__content {
@@ -2237,14 +2239,15 @@ button.swiper-pagination-bullet {
 
 .reviews {
   overflow: hidden;
+  padding-top: 8px;
 }
 
 .reviews h2 {
   margin-bottom: 27px;
+  padding-top: 17px;
 }
 
 .reviews__swiper {
-  padding-top: 26px;
   overflow: inherit;
 }
 
@@ -2340,7 +2343,7 @@ button.swiper-pagination-bullet {
 
 .advantages__swiper {
   overflow: inherit;
-  padding: 17px 0 86px;
+  padding: 0 0 86px;
 }
 
 .advantages__swiper span {
@@ -2355,6 +2358,7 @@ button.swiper-pagination-bullet {
 .advantages__swiper h2 {
   text-align: center;
   margin-bottom: 46px;
+  padding-top: 17px;
 }
 
 .advantages__swiper .swiper-button-next,
@@ -2443,12 +2447,12 @@ button.swiper-pagination-bullet {
 
 .photogallery .container {
   position: relative;
-  padding-top: 17px;
   margin-bottom: 44px;
 }
 
 .photogallery h2 {
   margin-bottom: 24px;
+  padding-top: 17px;
 }
 
 .photogallery p {
@@ -2773,7 +2777,8 @@ button.swiper-pagination-bullet {
 }
 
 .contacts h2 {
-  margin: 18px 0 22px;
+  margin: 0 0 22px;
+  padding-top: 18px;
 }
 
 .contacts p {
@@ -3924,7 +3929,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .tours {
     overflow-x: clip;
-    padding: 75px 0 34px;
+    padding: 76px 0 34px;
   }
 
   .tours::before {
@@ -3946,7 +3951,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .tours__swiper h2 {
-    margin: 12px 0 43px -7px;
+    margin: 0 0 43px -7px;
+    padding-top: 12px;
   }
 
   .tours__swiper-slide {
@@ -4008,6 +4014,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .training h2 {
     margin-left: 0;
     margin-bottom: 21px;
+    padding-top: 12px;
   }
 
   .training h3 {
@@ -4016,7 +4023,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .training__swiper {
-    padding-top: 13px;
+    padding-top: 0;
   }
 
   .training__swiper p {
@@ -4063,6 +4070,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .training__swiper-process ul {
     -ms-grid-columns: 52% 48%;
     grid-template-columns: 52% 48%;
+    grid-auto-flow: column;
     gap: 55px;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
@@ -4094,10 +4102,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
     top: -7px;
   }
 
+  .training__swiper-process li:nth-child(4n+1),
+  .training__swiper-process li:nth-child(4n) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+
+  .training__swiper-process li:nth-child(4n+2),
   .training__swiper-process li:nth-child(4n+3) {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
   }
 
   .training__swiper-process li:nth-child(4n) {
@@ -4134,6 +4150,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .about h2 {
     margin-bottom: 35px;
+    padding-top: 11px;
   }
 
   .about h3 {
@@ -4146,14 +4163,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .about__wrapper {
     width: 48%;
-    padding-top: 11px;
   }
 
   .reviews {
+    padding-top: 0;
     padding-bottom: 20px;
   }
 
-  .reviews__swiper {
+  .reviews h2 {
     padding-top: 13px;
   }
 
@@ -4201,12 +4218,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .advantages__swiper {
-    padding: 12px 0 0;
+    padding-bottom: 75px;
   }
 
   .advantages__swiper .swiper-button-next,
   .advantages__swiper .swiper-button-prev {
     display: none;
+  }
+
+  .advantages__swiper h2 {
+    padding-top: 12px;
   }
 
   .advantages__swiper-wrapper {
@@ -4257,16 +4278,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .photogallery {
-    padding-top: 75px;
+    padding-top: 0;
   }
 
   .photogallery .container {
-    padding-top: 12px;
     margin-bottom: 36px;
   }
 
-  .photogallery span {
-    left: 5.86%;
+  .photogallery h2 {
+    padding-top: 12px;
   }
 
   .photogallery .swiper-button-next,
@@ -4361,7 +4381,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .contacts h2 {
-    margin: 12px 0 18px;
+    margin: 0 0 18px;
+    padding-top: 12px;
   }
 
   .contacts p {
@@ -4635,7 +4656,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .tours__swiper h2 {
-    margin: 4px 0 27px;
+    margin: 0 0 27px;
+    padding-top: 4px;
   }
 
   .tours__swiper-content {
@@ -4693,6 +4715,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .training h2 {
     margin-bottom: 16px;
+    padding-top: 0;
   }
 
   .training h3 {
@@ -4780,10 +4803,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     left: -7px;
   }
 
+  .training__swiper-process li:nth-child(4n+1),
+  .training__swiper-process li:nth-child(4n),
+  .training__swiper-process li:nth-child(4n+2),
   .training__swiper-process li:nth-child(4n+3) {
-    -webkit-box-ordinal-group: 1;
-    -ms-flex-order: 0;
-    order: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
 
   .training__swiper-process p {
@@ -4805,6 +4831,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .about h2 {
     margin-bottom: 32px;
+    padding-top: 3px;
   }
 
   .about h3 {
@@ -4819,7 +4846,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .about__wrapper {
     width: 100%;
-    padding-top: 3px;
   }
 
   .reviews h2 {
@@ -4863,12 +4889,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .advantages__swiper {
-    padding-top: 4px;
+    padding-bottom: 64px;
   }
 
   .advantages__swiper h2 {
     max-width: 100%;
     margin-bottom: 30px;
+    padding-top: 4px;
   }
 
   .advantages__swiper-wrapper {
@@ -4892,12 +4919,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     font-size: 14px;
   }
 
-  .photogallery {
-    padding-top: 65px;
-  }
-
   .photogallery .container {
-    padding-top: 3px;
     padding-bottom: 50px;
     margin-bottom: 14px;
   }
@@ -4917,6 +4939,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .photogallery h2 {
     margin-bottom: 14px;
+    padding-top: 4px;
   }
 
   .photogallery p {
@@ -4986,7 +5009,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .contacts h2 {
-    margin: 4px 0 11px;
+    margin: 0 0 11px;
+    padding-top: 4px;
   }
 
   .contacts p {
