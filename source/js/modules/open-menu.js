@@ -4,7 +4,7 @@ const body = document.querySelector('body');
 const linkHeader = document.querySelectorAll('.menu a');
 
 function trapFocus(element) {
-  const focusableEls = document.querySelectorAll('header a[href]:not([disabled])');
+  const focusableEls = document.querySelectorAll('header a[href]:not([disabled]), .menu__toggle');
   const firstFocusableEl = focusableEls[0];
   const lastFocusableEl = focusableEls[focusableEls.length - 1];
   const KEYCODE_TAB = 9;
@@ -14,9 +14,7 @@ function trapFocus(element) {
 
     if (!isTabPressed) {
       return;
-    }
-
-    if (document.activeElement === lastFocusableEl) {
+    } else if (document.activeElement === lastFocusableEl) {
       firstFocusableEl.focus();
       e.preventDefault();
     }
@@ -45,7 +43,6 @@ if (document.querySelector('.menu') && menuButton) {
       header.addEventListener('click', outsideHeaderClick);
 
       header.addEventListener('keydown', function (e) {
-        e.preventDefault();
         if (e.key === 'Escape' || e.keyCode === 27) {
           header.classList.remove('open-menu');
           body.style.position = 'inherit';
