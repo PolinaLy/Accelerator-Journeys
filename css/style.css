@@ -4826,6 +4826,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     padding: 16px 0 61px;
   }
 
+  .about::before {
+    position: static;
+    display: block;
+    margin-left: -42px;
+    margin-bottom: 44px;
+  }
+
   .about h2 {
     margin-bottom: 32px;
     padding-top: 3px;
