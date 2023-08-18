@@ -9,7 +9,8 @@ export const initPhotogallerySwiper = function () {
 
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 5,
       },
       768: {
         slidesPerView: 2.75,
