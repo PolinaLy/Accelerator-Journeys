@@ -2189,8 +2189,7 @@ button.swiper-pagination-bullet {
   left: 0;
   width: 808px;
   height: 474px;
-  background-image: -webkit-image-set(url("../img/about/hike.png") 1x, url("../img/about/hike@2x.png"));
-  background-image: image-set(url("../img/about/hike.png") 1x, url("../img/about/hike@2x.png"));
+  background-image: url("../img/about/hike.png");
   background-size: cover;
 }
 
@@ -4140,8 +4139,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     top: 81px;
     width: 685px;
     height: 402px;
-    background-image: -webkit-image-set(url("../img/about/hike-tablet.png") 1x, url("../img/about/hike-tablet@2x.png"));
-    background-image: image-set(url("../img/about/hike-tablet.png") 1x, url("../img/about/hike-tablet@2x.png"));
+    background-image: url("../img/about/hike-tablet.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -4826,13 +4824,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .about {
     padding: 16px 0 61px;
-  }
-
-  .about::before {
-    position: static;
-    display: block;
-    margin-left: -42px;
-    margin-bottom: 44px;
   }
 
   .about h2 {
