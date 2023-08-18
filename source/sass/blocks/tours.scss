@@ -1,6 +1,8 @@
 .tours {
   position: relative;
   padding: 106px 0 51px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &::before {
     position: absolute;

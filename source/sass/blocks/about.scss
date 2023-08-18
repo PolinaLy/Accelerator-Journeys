@@ -2,6 +2,8 @@
   position: relative;
   padding: 114px 0 96px;
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &::before {
     position: absolute;

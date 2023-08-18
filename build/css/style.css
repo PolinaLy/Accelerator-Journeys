@@ -1771,6 +1771,8 @@ button.swiper-pagination-bullet {
 .tours {
   position: relative;
   padding: 106px 0 51px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .tours::before {
@@ -2176,6 +2178,8 @@ button.swiper-pagination-bullet {
   position: relative;
   padding: 114px 0 96px;
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .about::before {
@@ -2240,6 +2244,8 @@ button.swiper-pagination-bullet {
 .reviews {
   overflow: hidden;
   padding-top: 8px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .reviews h2 {
