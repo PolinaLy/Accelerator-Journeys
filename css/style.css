@@ -258,6 +258,7 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  word-break: break-all;
 }
 
 .btn:hover,
@@ -300,9 +301,10 @@ button,
 
 .header .container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -321,6 +323,9 @@ button,
   font-weight: 600;
   line-height: 100%;
   margin-left: 30px;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
 }
 
 .header__tel:hover,
@@ -401,8 +406,10 @@ button,
   width: 100%;
   max-width: 1200px;
   min-height: 538px;
+  max-height: 604px;
   color: #ffffff;
   z-index: 1;
+  overflow: auto;
 }
 
 .hero__content h2 {
@@ -473,6 +480,9 @@ button,
   position: absolute;
   top: 119px;
   right: 0;
+  width: 482px;
+  height: 317px;
+  background-image: url("../img/hero/poster-desktop.jpg");
 }
 
 .hero__wrapper-video video {
@@ -1771,9 +1781,13 @@ button.swiper-pagination-bullet {
 
 .tours {
   position: relative;
-  padding: 106px 0 51px;
+  padding: 106px 0 67px;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.tours .container {
+  position: relative;
 }
 
 .tours::before {
@@ -1804,8 +1818,46 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
 }
 
+.tours__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 5px;
+  margin: 0 auto;
+  gap: 12px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #2d383f;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+}
+
+.tours__link svg {
+  fill: none;
+  stroke: currentColor;
+  z-index: 1;
+}
+
+.tours__link:hover,
+.tours__link:focus-visible {
+  outline: none;
+  color: #1c3374;
+}
+
+.tours__link:active {
+  color: #0266c1;
+}
+
 .tours__swiper {
-  padding: 1px 0 36px;
+  padding: 1px 0 51px;
 }
 
 .tours__swiper .swiper-button-next,
@@ -1956,46 +2008,6 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   line-height: 100%;
   margin: 0;
-}
-
-.tours__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-left: 5px;
-  margin: 0 auto;
-  gap: 12px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #2d383f;
-}
-
-.tours__link p {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: 0.64px;
-  text-transform: uppercase;
-}
-
-.tours__link svg {
-  fill: none;
-  stroke: currentColor;
-  z-index: 1;
-}
-
-.tours__link:hover,
-.tours__link:focus-visible {
-  outline: none;
-  color: #1c3374;
-}
-
-.tours__link:active {
-  color: #0266c1;
 }
 
 .training {
@@ -2166,11 +2178,16 @@ button.swiper-pagination-bullet {
 .training__swiper-process li {
   position: relative;
   padding: 0 0 32px 40px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
   line-height: 150%;
   background-image: url("../img/svg/process-map.svg");
   background-size: 25px 25px;
   background-repeat: no-repeat;
-  background-position: left 11px;
+  background-position: bottom 45px left;
 }
 
 .training__swiper-process li:nth-child(4n+2) {
@@ -2861,6 +2878,8 @@ button.swiper-pagination-bullet {
 
 .contacts a {
   color: #2d383f;
+  max-width: 125px;
+  display: block;
 }
 
 .contacts a:hover,
@@ -3627,9 +3646,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .footer .header {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -3785,6 +3805,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .header.open-menu ul {
     display: block;
+    margin-left: -4px;
+    min-width: 143px;
   }
 
   .header.open-menu a {
@@ -3833,6 +3855,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     left: 0;
     right: 0;
     margin: 0 auto;
+    overflow: inherit;
   }
 
   .hero__content h2 {
@@ -3948,15 +3971,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
     letter-spacing: 0.64px;
     text-transform: uppercase;
     padding-left: 0;
+    padding: 3px 5px;
   }
 
-  .menu-header a:hover,
-  .menu-header a:focus-visible {
-    padding: 3px 5px;
+  .menu-header a:hover {
+    padding: 3px 5px 2px;
     border-bottom: 1px solid currentColor;
   }
 
-  .menu-header a:active {
+  .menu-header a:focus-visible {
+    outline: none;
     padding: 2px 4px;
     border: 1px solid currentColor;
   }
@@ -3994,7 +4018,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .tours {
     overflow-x: clip;
-    padding: 76px 0 34px;
+    padding: 76px 0 51px;
   }
 
   .tours::before {
@@ -4007,7 +4031,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .tours__swiper {
-    padding: 1px 7px 35px;
+    padding: 1px 7px 50px;
   }
 
   .tours__swiper .swiper-button-next,
@@ -4145,7 +4169,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .training__swiper-process li {
     padding-top: 21px;
     padding-bottom: 14px;
-    background-position: left 28px;
+    background-position: bottom 28px left;
   }
 
   .training__swiper-process li:nth-child(4n+1) {
@@ -4494,11 +4518,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
     line-height: 157%;
   }
 
+  .contacts a {
+    max-width: 115px;
+  }
+
   .footer {
     padding-bottom: 40px;
   }
 
   .footer .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 43px;
     padding-bottom: 34px;
   }
@@ -4522,6 +4553,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-column-gap: 140px;
@@ -4711,7 +4745,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .tours {
-    padding-top: 62px;
+    padding: 62px 0 48px;
   }
 
   .tours::after {
@@ -4728,8 +4762,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     background-repeat: no-repeat;
   }
 
+  .tours__link {
+    position: relative;
+    gap: 10px;
+    font-size: 14px;
+    z-index: 1;
+  }
+
   .tours__swiper {
-    padding: 1px 0 15px;
+    padding: 1px 0 29px;
   }
 
   .tours__swiper h2 {
@@ -4774,16 +4815,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tours__swiper-content-info svg {
     width: 72px;
     height: 12px;
-  }
-
-  .tours__link {
-    position: relative;
-    gap: 10px;
-  }
-
-  .tours__link p {
-    font-size: 14px;
-    z-index: 1;
   }
 
   .training {
