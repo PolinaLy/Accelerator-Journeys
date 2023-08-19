@@ -636,6 +636,7 @@ button,
 
 .menu a:hover,
 .menu a:focus-visible {
+  outline: none;
   border-bottom: 1px solid currentColor;
 }
 
@@ -2125,6 +2126,25 @@ button.swiper-pagination-bullet {
   border: 1px solid rgba(2, 102, 193, 0.1);
 }
 
+.training__swiper-name a svg {
+  fill: #2d383f;
+}
+
+.training__swiper-name a:hover,
+.training__swiper-name a:focus-visible {
+  outline: none;
+  border-color: #2d383f;
+}
+
+.training__swiper-name a:active {
+  background-color: #0266c1;
+  border-color: transparent;
+}
+
+.training__swiper-name a:active svg {
+  fill: #ffffff;
+}
+
 .training__swiper-process {
   border-bottom: 1px solid #0266c1;
 }
@@ -2513,8 +2533,9 @@ button.swiper-pagination-bullet {
 
 .photogallery__swiper-slide img {
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .form {
@@ -2821,18 +2842,14 @@ button.swiper-pagination-bullet {
 }
 
 .contacts li {
+  position: relative;
   padding-left: 56px;
-  background-image: url("../img/svg/mail.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.contacts li:first-of-type {
-  background-image: url("../img/svg/phone.svg");
 }
 
 .contacts li:last-of-type {
   background-image: url("../img/svg/address.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .contacts h4 {
@@ -2844,6 +2861,26 @@ button.swiper-pagination-bullet {
 
 .contacts a {
   color: #2d383f;
+}
+
+.contacts a:hover,
+.contacts a:focus-visible {
+  outline: none;
+  color: #1c3374;
+}
+
+.contacts a:active {
+  color: #0266c1;
+}
+
+.contacts svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 0;
+  fill: none;
+  stroke: currentColor;
 }
 
 /* required styles */
@@ -3839,7 +3876,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .hero__wrapper-audio-player {
     position: relative;
-    top: 49px;
+    top: 69px;
   }
 
   .hero__swiper-pagination {
@@ -4342,13 +4379,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .form p {
-    width: 300px;
+    width: 44.3%;
     margin: 0 auto 28px;
   }
 
   .form form {
     gap: 7px;
-    width: 266px;
+    width: 39.24%;
   }
 
   .form input {
@@ -4429,7 +4466,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .contacts li {
     padding-left: 34px;
     background-size: 24px 24px;
+  }
+
+  .contacts li:last-of-type {
     background-position-y: top;
+  }
+
+  .contacts svg {
+    margin: 0;
   }
 
   .contacts h4 {
@@ -4476,9 +4520,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
     -webkit-column-gap: 140px;
     -moz-column-gap: 140px;
     column-gap: 140px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
 
   .header .header__wrapper {
@@ -4546,7 +4590,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .hero__content {
-    max-width: 290px;
+    max-width: 90.6%;
   }
 
   .hero__content h2 {
@@ -4560,7 +4604,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .hero__button {
-    width: 180px;
+    width: 62%;
     min-height: 52px;
     padding: 18px 10px;
   }
@@ -4851,8 +4895,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .about::before {
     position: static;
     display: block;
-    margin-left: -42px;
     margin-bottom: 44px;
+    /* stylelint-disable */
+    background-image: -webkit-image-set(url("../img/about/hike-mobile.webp") type("image/webp"), url("../img/about/hike-mobile.png") type("image/png"));
+    background-image: image-set(url("../img/about/hike-mobile.webp") type("image/webp"), url("../img/about/hike-mobile.png") type("image/png"));
+    /* stylelint-enable */
   }
 
   .about h2 {
@@ -4982,7 +5029,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     -ms-grid-rows: 103px 153px;
     grid-template-rows: 103px 153px;
     gap: 3px;
-    margin: 0 auto;
+    margin-left: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -5014,6 +5061,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .form p {
     font-size: 12px;
     margin-bottom: 26px;
+    width: 93.75%;
   }
 
   .form .btn--form {
@@ -5124,14 +5172,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 }
 
-@media (max-width: 579px) {
-  .header .container {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-  }
-}
-
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -5139,11 +5179,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .tours::after {
-    background-image: url("../img/tours/big-clouds@2x.png");
-    background-size: cover;
-  }
-
   .form {
     /* stylelint-disable */
     background-image: -webkit-image-set(url("../img/form/background@2x.webp") type("image/webp"), url("../img/form/background@2x.jpg") type("image/jpeg"));
