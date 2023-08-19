@@ -409,7 +409,7 @@ button,
   max-height: 604px;
   color: #ffffff;
   z-index: 1;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .hero__content h2 {
@@ -482,7 +482,6 @@ button,
   right: 0;
   width: 482px;
   height: 317px;
-  background-image: url("../img/hero/poster-desktop.jpg");
 }
 
 .hero__wrapper-video video {
@@ -3970,7 +3969,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
     font-weight: 700;
     letter-spacing: 0.64px;
     text-transform: uppercase;
-    padding-left: 0;
     padding: 3px 5px;
   }
 
