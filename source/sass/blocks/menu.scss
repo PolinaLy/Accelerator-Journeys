@@ -21,16 +21,26 @@
     padding: 3px 5px;
     transition: opacity 0.3s ease;
 
-    &:hover,
-    &:focus-visible {
+    &:hover {
       border-bottom: 1px solid currentColor;
     }
 
-    &:active {
+    &:focus-visible {
+      outline: none;
       padding: 2px 4px;
       border: 1px solid currentColor;
     }
   }
+
+  // @include vp-1199 {
+  //   ul {
+  //     margin-left: -4px;
+  //   }
+
+  //   a {
+  //     padding: 2px 4px;
+  //   }
+  // }
 }
 
 .menu__toggle {

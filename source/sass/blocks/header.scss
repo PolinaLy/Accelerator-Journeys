@@ -15,7 +15,8 @@
 
   .container {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-between;
   }
 
@@ -31,19 +32,14 @@
     min-height: 44px;
 
     .container {
+      display: flex;
       flex-wrap: wrap;
       column-gap: 140px;
-      align-items: center;
+      align-items: start;
     }
 
     .header__wrapper {
       padding-top: 15px;
-    }
-  }
-
-  @include vp-579 {
-    .container {
-      align-items: start;
     }
   }
 }
@@ -57,6 +53,7 @@
   font-weight: 600;
   line-height: 100%;
   margin-left: 30px;
+  grid-column: 3/4;
 
   &:hover,
   &:focus-visible {
@@ -96,6 +93,8 @@
 
     ul {
       display: block;
+      margin-left: -4px;
+      min-width: 143px;
     }
 
     a {

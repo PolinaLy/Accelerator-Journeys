@@ -1,13 +1,27 @@
 .form {
   width: 100%;
   min-height: 800px;
-  background-image: url("../img/form/background.jpg");
+  /* stylelint-disable */
+  background-image: -webkit-image-set(
+    url("../img/form/background.webp") type("image/webp"),
+    url("../img/form/background.jpg") type("image/jpeg"));
+  background-image: image-set(
+    url("../img/form/background.webp") type("image/webp"),
+    url("../img/form/background.jpg") type("image/jpeg"));
+  /* stylelint-enable */
   background-color: #0a6825;
   background-size: cover;
   background-repeat: no-repeat;
 
   @include retina {
-    background-image: url("../img/form/background@2x.jpg");
+    /* stylelint-disable */
+    background-image: -webkit-image-set(
+      url("../img/form/background@2x.webp") type("image/webp"),
+      url("../img/form/background@2x.jpg") type("image/jpeg"));
+    background-image: image-set(
+      url("../img/form/background@2x.webp") type("image/webp"),
+      url("../img/form/background@2x.jpg") type("image/jpeg"));
+    /* stylelint-enable */
   }
 
   .container {
@@ -103,13 +117,13 @@
     }
 
     p {
-      width: 300px;
+      width: 44.3%;
       margin: 0 auto 28px;
     }
 
     form {
       gap: 7px;
-      width: 266px;
+      width: 39.24%;
     }
 
     input {
@@ -134,12 +148,27 @@
 
   @include vp-767 {
     min-height: 621px;
-    background-image: url("../img/form/background-mobile.jpg");
+    /* stylelint-disable */
+    background-image: -webkit-image-set(
+      url("../img/form/background-mobile.webp") type("image/webp"),
+      url("../img/form/background-mobile.jpg") type("image/jpeg"));
+
+    background-image: image-set(
+      url("../img/form/background-mobile.webp") type("image/webp"),
+      url("../img/form/background-mobile.jpg") type("image/jpeg"));
+    /* stylelint-enable */
     background-size: cover;
     background-repeat: no-repeat;
 
     @include retina {
-      background-image: url("../img/form/background.jpg");
+      /* stylelint-disable */
+      background-image: -webkit-image-set(
+        url("../img/form/background.webp") type("image/webp"),
+        url("../img/form/background.jpg") type("image/jpeg"));
+      background-image: image-set(
+        url("../img/form/background.webp") type("image/webp"),
+        url("../img/form/background.jpg") type("image/jpeg"));
+      /* stylelint-enable */
       background-position: center;
     }
 
@@ -159,6 +188,7 @@
     p {
       font-size: 12px;
       margin-bottom: 26px;
+      width: 93.75%;
     }
 
     .btn {

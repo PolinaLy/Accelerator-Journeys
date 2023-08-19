@@ -12,7 +12,14 @@
     left: 0;
     width: 808px;
     height: 474px;
-    background-image: url("../img/about/hike.png");
+     /* stylelint-disable */
+    background-image: -webkit-image-set(
+      url("../img/about/hike.webp") type("image/webp"),
+      url("../img/about/hike.png") type("image/png"));
+    background-image: image-set(
+      url("../img/about/hike.webp") type("image/webp"),
+      url("../img/about/hike.png") type("image/png"));
+    /* stylelint-enable */
     background-size: cover;
   }
 
@@ -23,8 +30,24 @@
     right: -16%;
     width: 840px;
     height: 280px;
-    background-image: url("../img/about/clouds.png");
+     /* stylelint-disable */
+     background-image: -webkit-image-set(
+      url("../img/about/clouds.webp") type("image/webp"),
+      url("../img/about/clouds.png") type("image/png"));
+    background-image: image-set(
+      url("../img/about/clouds.webp") type("image/webp"),
+      url("../img/about/clouds.png") type("image/png"));
+    /* stylelint-enable */
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: 1200px) {
+    @include retina {
+      &::before {
+        background-image: url("../img/about/hike@2x.png");
+        background-size: cover;
+      }
+    }
   }
 
   h2 {
@@ -56,7 +79,14 @@
       top: 81px;
       width: 685px;
       height: 402px;
-      background-image: url("../img/about/hike-tablet.png");
+      /* stylelint-disable */
+     background-image: -webkit-image-set(
+      url("../img/about/hike-tablet.webp") type("image/webp"),
+      url("../img/about/hike-tablet.png") type("image/png"));
+    background-image: image-set(
+      url("../img/about/hike-tablet.webp") type("image/webp"),
+      url("../img/about/hike-tablet.png") type("image/png"));
+    /* stylelint-enable */
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -89,8 +119,22 @@
     &::before {
       position: static;
       display: block;
-      margin-left: -42px;
       margin-bottom: 44px;
+      /* stylelint-disable */
+     background-image: -webkit-image-set(
+      url("../img/about/hike-mobile.webp") type("image/webp"),
+      url("../img/about/hike-mobile.png") type("image/png"));
+    background-image: image-set(
+      url("../img/about/hike-mobile.webp") type("image/webp"),
+      url("../img/about/hike-mobile.png") type("image/png"));
+    /* stylelint-enable */
+    }
+
+    @include retina {
+      &::before {
+        background-image: url("../img/about/hike-mobile@2x.png");
+        background-size: contain;
+      }
     }
 
     h2 {

@@ -23,17 +23,13 @@
   }
 
   li {
+    position: relative;
     padding-left: 56px;
-    background-image: url("../img/svg/mail.svg");
-    background-repeat: no-repeat;
-    background-position: left center;
-
-    &:first-of-type {
-      background-image: url("../img/svg/phone.svg");
-    }
 
     &:last-of-type {
       background-image: url("../img/svg/address.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
     }
   }
 
@@ -46,6 +42,28 @@
 
   a {
     color: $color-default-elephant;
+    max-width: 125px;
+    display: block;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      color: $color-resolution-blue;
+    }
+
+    &:active {
+      color: $color-navy-blue;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0;
+    fill: none;
+    stroke: currentColor;
   }
 
   @include vp-1199 {
@@ -69,7 +87,14 @@
     li {
       padding-left: 34px;
       background-size: 24px 24px;
-      background-position-y: top;
+
+      &:last-of-type {
+        background-position-y: top;
+      }
+    }
+
+    svg {
+      margin: 0;
     }
 
     h4 {
@@ -81,6 +106,10 @@
     a {
       font-size: 14px;
       line-height: 157%;
+    }
+
+    a {
+      max-width: 115px;
     }
   }
 

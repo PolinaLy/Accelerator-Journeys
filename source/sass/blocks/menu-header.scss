@@ -24,14 +24,15 @@
       letter-spacing: 0.64px;
       text-transform: uppercase;
       padding-left: 0;
+      padding: 3px 5px;
 
-      &:hover,
-      &:focus-visible {
-        padding: 3px 5px;
+      &:hover {
+        padding: 3px 5px 2px;
         border-bottom: 1px solid currentColor;
       }
 
-      &:active {
+      &:focus-visible {
+        outline: none;
         padding: 2px 4px;
         border: 1px solid currentColor;
       }

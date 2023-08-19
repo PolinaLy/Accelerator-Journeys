@@ -202,6 +202,25 @@
     width: 24px;
     height: 24px;
     border: 1px solid $color-elephant-opasity;
+
+    svg {
+      fill: $color-default-elephant;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      border-color: $color-default-elephant;
+    }
+
+    &:active {
+      background-color: $color-navy-blue;
+      border-color: transparent;
+
+      svg {
+        fill: $color-default-white;
+      }
+    }
   }
 
   @include vp-767 {
@@ -227,13 +246,15 @@
   li {
     position: relative;
     padding: 0 0 32px 40px;
+    display: grid;
+    align-items: end;
 
     line-height: 150%;
 
     background-image: url("../img/svg/process-map.svg");
     background-size: 25px 25px;
     background-repeat: no-repeat;
-    background-position: left 11px;
+    background-position: bottom 45px left;
 
     &:nth-child(4n+2) {
       background-image: url("../img/svg/process-boots.svg");
@@ -280,7 +301,7 @@
     li {
       padding-top: 21px;
       padding-bottom: 14px;
-      background-position: left 28px;
+      background-position: bottom 28px left;
 
       &:nth-child(4n+1) {
         border-bottom: 1px solid $color-elephant-opasity;

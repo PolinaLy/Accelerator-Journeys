@@ -9,6 +9,7 @@
   cursor: pointer;
   transition: opacity $trans-default;
   user-select: none;
+  word-break: break-all;
 
   &:hover,
   &:focus-visible {
@@ -20,6 +21,7 @@
 
   &:active {
     background-color: $color-resolution-blue;
+    color: $color-default-white;
   }
 
   &:disabled {
