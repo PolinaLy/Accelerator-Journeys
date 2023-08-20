@@ -365,6 +365,11 @@ button,
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #6e91b7;
+  visibility: hidden;
+}
+
+.hero__swiper-slide.swiper-slide-active {
+  visibility: visible;
 }
 
 .hero__swiper-slide img {
