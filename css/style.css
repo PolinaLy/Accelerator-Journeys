@@ -410,6 +410,7 @@ button,
   color: #ffffff;
   z-index: 1;
   overflow-y: auto;
+  overflow-x: clip;
 }
 
 .hero__content h2 {
@@ -482,9 +483,13 @@ button,
   right: 0;
   width: 482px;
   height: 317px;
+  background-image: url("../img/hero/poster-desktop.jpg");
 }
 
 .hero__wrapper-video video {
+  display: none;
+  -o-object-fit: cover;
+  object-fit: cover;
   width: 482px;
   height: 317px;
 }
@@ -3771,6 +3776,60 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 }
 
+@media (max-width: 1229px) {
+  .header .container {
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  .hero__content {
+    width: 94%;
+    margin-left: 3%;
+  }
+
+  .hero__swiper-pagination {
+    margin-right: 3%;
+  }
+
+  .tours .container {
+    width: 94%;
+  }
+
+  .training .container {
+    width: 94%;
+  }
+
+  .training__swiper-process ul {
+    -ms-grid-columns: (auto)[4];
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .about .container {
+    width: 94%;
+  }
+
+  .reviews .container {
+    width: 94%;
+  }
+
+  .advantages .container {
+    width: 94%;
+  }
+
+  .photogallery .container {
+    width: 94%;
+  }
+
+  .contacts-map .container {
+    width: 94%;
+  }
+
+  .footer .container {
+    width: 94%;
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     width: 100%;
@@ -3846,6 +3905,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .hero__content {
+    width: 100%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -3909,6 +3969,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .hero__swiper-pagination {
+    margin-right: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -4014,6 +4075,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     font-size: 25px;
   }
 
+  .tours .container {
+    width: 100%;
+  }
+
   .tours {
     overflow-x: clip;
     padding: 76px 0 51px;
@@ -4092,6 +4157,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .tours__swiper-content-info {
     gap: 25px;
+  }
+
+  .training .container {
+    width: 100%;
   }
 
   .training {
@@ -4213,6 +4282,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     line-height: 157%;
   }
 
+  .about .container {
+    width: 100%;
+  }
+
   .about {
     padding: 63px 0 77px;
   }
@@ -4252,6 +4325,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .about__wrapper {
     width: 48%;
+  }
+
+  .reviews .container {
+    width: 100%;
   }
 
   .reviews {
@@ -4295,6 +4372,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .reviews__swiper-content h4 {
     font-size: 12px;
     margin-bottom: 7px;
+  }
+
+  .advantages .container {
+    width: 100%;
   }
 
   .advantages {
@@ -4364,6 +4445,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .advantages__swiper-slide-container p {
     font-size: 12px;
     line-height: 150%;
+  }
+
+  .photogallery .container {
+    width: 100%;
   }
 
   .photogallery {
@@ -4459,6 +4544,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     height: 340px;
   }
 
+  .contacts-map .container {
+    width: 100%;
+  }
+
   .contacts-map {
     padding: 76px 0 70px;
   }
@@ -4518,6 +4607,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .contacts a {
     max-width: 115px;
+  }
+
+  .footer .container {
+    width: 100%;
   }
 
   .footer {
@@ -5210,6 +5303,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .custom-input__label,
   .custom-textarea__label {
     margin: 0 0 18px 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .tours__link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
   }
 }
 
