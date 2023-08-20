@@ -32,6 +32,11 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #6e91b7;
+  visibility: hidden;
+
+  &.swiper-slide-active {
+    visibility: visible;
+  }
 
   img {
     position: absolute;
