@@ -20,6 +20,14 @@
     justify-content: space-between;
   }
 
+  @include vp-1229 {
+    .container {
+      width: 94%;
+      margin-right: 3%;
+      margin-left: 3%;
+    }
+  }
+
   @include vp-1199 {
     min-height: 54px;
 

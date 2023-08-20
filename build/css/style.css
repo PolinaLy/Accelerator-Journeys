@@ -302,6 +302,13 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1229px) {
+  .header .container {
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+}
 @media (max-width: 1199px) {
   .header {
     min-height: 54px;
@@ -547,6 +554,7 @@ button,
   color: #ffffff;
   z-index: 1;
   overflow-y: auto;
+  overflow-x: clip;
 }
 .hero__content h2 {
   width: 100%;
@@ -599,8 +607,15 @@ button,
 .hero__content li:last-of-type::before {
   background-image: url("../img/svg/level.svg");
 }
+@media (max-width: 1229px) {
+  .hero__content {
+    width: 94%;
+    margin-left: 3%;
+  }
+}
 @media (max-width: 1199px) {
   .hero__content {
+    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -660,8 +675,12 @@ button,
   right: 0;
   width: 482px;
   height: 317px;
+  background-image: url("../img/hero/poster-desktop.jpg");
 }
 .hero__wrapper-video video {
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 482px;
   height: 317px;
 }
@@ -827,8 +846,14 @@ button,
   max-width: 1200px;
   z-index: 3;
 }
+@media (max-width: 1229px) {
+  .hero__swiper-pagination {
+    margin-right: 3%;
+  }
+}
 @media (max-width: 1199px) {
   .hero__swiper-pagination {
+    margin-right: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2148,6 +2173,16 @@ button.swiper-pagination-bullet {
 .tours .container {
   position: relative;
 }
+@media (max-width: 1229px) {
+  .tours .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .tours .container {
+    width: 100%;
+  }
+}
 .tours::before {
   position: absolute;
   content: "";
@@ -2244,6 +2279,16 @@ button.swiper-pagination-bullet {
 }
 .tours__link:active {
   color: #0266c1;
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .tours__link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+  }
 }
 @media (max-width: 767px) {
   .tours__link {
@@ -2504,6 +2549,16 @@ button.swiper-pagination-bullet {
 
 .training {
   padding: 40px 0 0;
+}
+@media (max-width: 1229px) {
+  .training .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .training .container {
+    width: 100%;
+  }
 }
 .training::before, .training::after {
   display: none;
@@ -2786,6 +2841,12 @@ button.swiper-pagination-bullet {
 .training__swiper-process p {
   margin: 0;
 }
+@media (max-width: 1229px) {
+  .training__swiper-process ul {
+    -ms-grid-columns: (auto)[4];
+    grid-template-columns: repeat(4, auto);
+  }
+}
 @media (max-width: 1199px) {
   .training__swiper-process {
     border-bottom: none;
@@ -2900,6 +2961,16 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   max-width: 1440px;
   margin: 0 auto;
+}
+@media (max-width: 1229px) {
+  .about .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .about .container {
+    width: 100%;
+  }
 }
 .about::before {
   position: absolute;
@@ -3051,6 +3122,16 @@ button.swiper-pagination-bullet {
   padding-top: 8px;
   max-width: 1440px;
   margin: 0 auto;
+}
+@media (max-width: 1229px) {
+  .reviews .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .reviews .container {
+    width: 100%;
+  }
 }
 .reviews h2 {
   margin-bottom: 27px;
@@ -3207,6 +3288,16 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
   padding-top: 119px;
   overflow: hidden;
+}
+@media (max-width: 1229px) {
+  .advantages .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .advantages .container {
+    width: 100%;
+  }
 }
 .advantages::before {
   position: absolute;
@@ -3428,6 +3519,16 @@ button.swiper-pagination-bullet {
 .photogallery .container {
   position: relative;
   margin-bottom: 44px;
+}
+@media (max-width: 1229px) {
+  .photogallery .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .photogallery .container {
+    width: 100%;
+  }
 }
 .photogallery h2 {
   margin-bottom: 24px;
@@ -3918,6 +4019,16 @@ button.swiper-pagination-bullet {
   -ms-grid-columns: 483px auto;
   grid-template-columns: 483px auto;
   gap: 132px;
+}
+@media (max-width: 1229px) {
+  .contacts-map .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .contacts-map .container {
+    width: 100%;
+  }
 }
 @media (max-width: 1199px) {
   .contacts-map {
@@ -4794,6 +4905,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
   padding-bottom: 30px;
   background-color: #ffffff;
   border-top: 1px solid #2d383f;
+}
+@media (max-width: 1229px) {
+  .footer .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199px) {
+  .footer .container {
+    width: 100%;
+  }
 }
 .footer .header {
   position: relative;

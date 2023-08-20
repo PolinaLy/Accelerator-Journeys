@@ -7,6 +7,7 @@ export const initVideo = function () {
       if (video.classList.contains('is-active')) {
         video.classList.remove('is-active');
       } else {
+        video.style.display = 'block';
         video.play();
         video.setAttribute('controls', '');
         video.classList.add('is-active');

@@ -5,6 +5,16 @@
   max-width: 1440px;
   margin: 0 auto;
 
+  .container {
+    @include vp-1229 {
+      width: 94%;
+    }
+
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -12,7 +22,7 @@
     left: 0;
     width: 808px;
     height: 474px;
-     /* stylelint-disable */
+    /* stylelint-disable */
     background-image: -webkit-image-set(
       url("../img/about/hike.webp") type("image/webp"),
       url("../img/about/hike.png") type("image/png"));
@@ -30,8 +40,8 @@
     right: -16%;
     width: 840px;
     height: 280px;
-     /* stylelint-disable */
-     background-image: -webkit-image-set(
+    /* stylelint-disable */
+    background-image: -webkit-image-set(
       url("../img/about/clouds.webp") type("image/webp"),
       url("../img/about/clouds.png") type("image/png"));
     background-image: image-set(
@@ -79,8 +89,8 @@
       top: 81px;
       width: 685px;
       height: 402px;
-      /* stylelint-disable */
-     background-image: -webkit-image-set(
+    /* stylelint-disable */
+    background-image: -webkit-image-set(
       url("../img/about/hike-tablet.webp") type("image/webp"),
       url("../img/about/hike-tablet.png") type("image/png"));
     background-image: image-set(
@@ -120,8 +130,8 @@
       position: static;
       display: block;
       margin-bottom: 44px;
-      /* stylelint-disable */
-     background-image: -webkit-image-set(
+    /* stylelint-disable */
+    background-image: -webkit-image-set(
       url("../img/about/hike-mobile.webp") type("image/webp"),
       url("../img/about/hike-mobile.png") type("image/png"));
     background-image: image-set(

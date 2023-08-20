@@ -6,6 +6,16 @@
   background-color: $color-default-white;
   border-top: 1px solid $color-default-elephant;
 
+  .container {
+    @include vp-1229 {
+      width: 94%;
+    }
+
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+
   .header {
     position: relative;
     display: grid;

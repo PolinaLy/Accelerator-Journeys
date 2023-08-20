@@ -5,6 +5,14 @@
     display: grid;
     grid-template-columns: 483px auto;
     gap: 132px;
+
+    @include vp-1229 {
+      width: 94%;
+    }
+
+    @include vp-1199 {
+      width: 100%;
+    }
   }
 
   @include vp-1199 {

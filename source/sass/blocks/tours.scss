@@ -6,6 +6,14 @@
 
   .container {
     position: relative;
+
+    @include vp-1229 {
+      width: 94%;
+    }
+
+    @include vp-1199 {
+      width: 100%;
+    }
   }
 
   &::before {
@@ -118,6 +126,15 @@
 
   &:active {
     color: $color-navy-blue;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
   }
 
   @include vp-767 {

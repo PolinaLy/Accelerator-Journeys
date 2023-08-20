@@ -98,6 +98,7 @@
   color: $color-default-white;
   z-index: 1;
   overflow-y: auto;
+  overflow-x: clip;
 
 
   h2 {
@@ -154,7 +155,13 @@
     }
   }
 
+  @include vp-1229 {
+    width: 94%;
+    margin-left: 3%;
+  }
+
   @include vp-1199 {
+    width: 100%;
     align-items: center;
     max-width: 678px;
     text-align: center;
@@ -214,8 +221,11 @@
   right: 0;
   width: 482px;
   height: 317px;
+  background-image: url("../img/hero/poster-desktop.jpg");
 
   video {
+    display: none;
+    object-fit: cover;
     width: 482px;
     height: 317px;
   }
@@ -384,7 +394,12 @@
   max-width: 1200px;
   z-index: 3;
 
+  @include vp-1229 {
+    margin-right: 3%;
+  }
+
   @include vp-1199 {
+    margin-right: 0;
     justify-content: center;
     margin-bottom: 82px;
   }

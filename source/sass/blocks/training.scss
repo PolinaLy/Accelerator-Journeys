@@ -1,6 +1,16 @@
 .training {
   padding: 40px 0 0;
 
+  .container {
+    @include vp-1229 {
+      width: 94%;
+    }
+
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+
   &::before,
   &::after {
     display: none;
@@ -282,6 +292,12 @@
 
   p {
     margin: 0;
+  }
+
+  @include vp-1229 {
+    ul {
+      grid-template-columns: repeat(4, auto);
+    }
   }
 
   @include vp-1199 {
