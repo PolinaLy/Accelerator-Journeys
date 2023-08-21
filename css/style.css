@@ -372,6 +372,9 @@ button,
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .hero__swiper-slide::before {
@@ -395,7 +398,7 @@ button,
 }
 
 .hero__content {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,11 +409,8 @@ button,
   width: 100%;
   max-width: 1200px;
   min-height: 538px;
-  max-height: 604px;
   color: #ffffff;
   z-index: 1;
-  overflow-y: auto;
-  overflow-x: clip;
 }
 
 .hero__content h2 {
@@ -475,6 +475,7 @@ button,
   width: 220px;
   min-height: 58px;
   padding: 21px 10px;
+  margin-bottom: 20px;
 }
 
 .hero__wrapper-video {
@@ -3333,11 +3334,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-control-layers-toggle {
+  background-image: url(images/layers.png);
   width: 36px;
   height: 36px;
 }
 
 .leaflet-retina .leaflet-control-layers-toggle {
+  background-image: url(images/layers-2x.png);
   background-size: 26px 26px;
 }
 
@@ -3396,6 +3399,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-default-icon-path {
   /* used only in path-guessing heuristic, see L.Icon.Default */
+  background-image: url(images/marker-icon.png);
 }
 
 /* attribution and scale controls */
@@ -3924,6 +3928,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .hero__content {
     width: 100%;
+    min-height: 260px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -3950,6 +3955,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .hero__button {
     width: 206px;
+    margin: 0;
   }
 
   .hero__wrapper-video {
@@ -4681,11 +4687,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     padding-top: 15px;
   }
 
+  .header__wrapper-tel {
+    margin-left: auto;
+  }
+
   .header__tel {
     min-width: 110px;
     height: 14px;
     font-size: 14px;
-    margin-left: auto;
   }
 
   .header.open-menu .container {
@@ -4701,7 +4710,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     margin-right: 0;
   }
 
-  .header.open-menu .header__tel {
+  .header.open-menu .header__wrapper-tel {
     position: absolute;
     top: 42px;
     right: 4.7%;
@@ -4739,10 +4748,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .hero__wrapper {
     margin: 0 auto;
     padding: 139px 0 40px;
-  }
-
-  .hero__content {
-    max-width: 90.6%;
   }
 
   .hero__content h2 {
