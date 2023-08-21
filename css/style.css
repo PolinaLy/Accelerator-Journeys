@@ -1752,14 +1752,6 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
 }
 
-.slider-button:active {
-  background-color: #1c3374;
-}
-
-.slider-button:active::after {
-  background-image: url("../img/svg/arrow-button.svg");
-}
-
 .slider-button:hover,
 .slider-button:focus-visible {
   outline: none;
@@ -1770,6 +1762,14 @@ button.swiper-pagination-bullet {
 .slider-button:hover::after,
 .slider-button:focus-visible::after {
   background-image: url("../img/svg/arrow-button-hover.svg");
+}
+
+.slider-button:active {
+  background-color: #1c3374;
+}
+
+.slider-button:active::after {
+  background-image: url("../img/svg/arrow-button.svg");
 }
 
 .slider-button.swiper-button-prev {
