@@ -279,10 +279,6 @@ button,
   pointer-events: none;
 }
 
-.btn.focus-visible:focus {
-  opacity: 0.8;
-}
-
 .header {
   position: absolute;
   top: 0;
@@ -662,6 +658,10 @@ button,
   outline: none;
   padding: 2px 4px;
   border: 1px solid currentColor;
+}
+
+.menu a:active {
+  border: none;
 }
 
 .menu__toggle {
@@ -2531,8 +2531,15 @@ button.swiper-pagination-bullet {
   top: auto;
 }
 
+.photogallery__swiper-wrapper {
+  gap: 5px;
+}
+
 .photogallery__swiper-slide {
   height: 449px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .photogallery__swiper-slide ul {
@@ -2694,34 +2701,40 @@ button.swiper-pagination-bullet {
 }
 
 .form input:active,
-.form input:focus-visible {
+.form input:focus-visible,
+.form input:focus {
   outline: none;
   border-color: #1c3374;
   cursor: pointer;
 }
 
 .form input:active::-webkit-input-placeholder,
-.form input:focus-visible::-webkit-input-placeholder {
+.form input:focus-visible::-webkit-input-placeholder,
+.form input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
 .form input:active::-moz-placeholder,
-.form input:focus-visible::-moz-placeholder {
+.form input:focus-visible::-moz-placeholder,
+.form input:focus::-moz-placeholder {
   opacity: 0;
 }
 
 .form input:active:-ms-input-placeholder,
-.form input:focus-visible:-ms-input-placeholder {
+.form input:focus-visible:-ms-input-placeholder,
+.form input:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
 .form input:active::-ms-input-placeholder,
-.form input:focus-visible::-ms-input-placeholder {
+.form input:focus-visible::-ms-input-placeholder,
+.form input:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
 .form input:active::placeholder,
-.form input:focus-visible::placeholder {
+.form input:focus-visible::placeholder,
+.form input:focus::placeholder {
   opacity: 0;
 }
 
@@ -5156,8 +5169,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     line-height: 150%;
   }
 
+  .photogallery__swiper-wrapper {
+    gap: 3px;
+  }
+
   .photogallery__swiper-slide {
     height: 259px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .photogallery__swiper-slide ul {
@@ -5320,12 +5340,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
     right: 0;
     margin: 0 auto;
     z-index: 2;
-  }
-}
-
-@media (hover: hover) {
-  .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
   }
 }
 
