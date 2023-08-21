@@ -252,8 +252,6 @@ button,
   background-color: #0266c1;
   border: 1px solid transparent;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -269,8 +267,7 @@ button,
   border: 1px solid #1c3374;
 }
 
-.btn:active,
-.btn:active:hover {
+.btn:active {
   background-color: #1c3374;
   color: #ffffff;
   border-color: #1c3374;
@@ -648,8 +645,6 @@ button,
   width: -moz-fit-content;
   width: fit-content;
   padding: 3px 5px;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 
 .menu a:hover {
@@ -662,8 +657,7 @@ button,
   border: 1px solid currentColor;
 }
 
-.menu a:active,
-.menu a:active:hover {
+.menu a:active {
   border: none;
 }
 
@@ -1760,6 +1754,10 @@ button.swiper-pagination-bullet {
 
 .slider-button:active {
   background-color: #1c3374;
+}
+
+.slider-button:active::after {
+  background-image: url("../img/svg/arrow-button.svg");
 }
 
 .slider-button:hover,
