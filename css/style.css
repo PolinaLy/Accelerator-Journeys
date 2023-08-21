@@ -3888,14 +3888,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
     background-image: url("../img/svg/menu-close.svg");
   }
 
-  .header.no-js ul {
-    margin-top: 16px;
-  }
-
-  .header.no-js .menu__toggle {
-    display: none;
-  }
-
   .hero__swiper-slide {
     min-height: 1024px;
     padding: 0 5.86%;
@@ -4695,10 +4687,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   .header.open-menu .menu__toggle::after {
     top: 0;
-  }
-
-  .header.no-js ul {
-    margin-top: 8px;
   }
 
   .hero__swiper .swiper-pagination-bullet {
