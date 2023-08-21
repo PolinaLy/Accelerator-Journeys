@@ -18,13 +18,13 @@
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
-  }
 
-  @include vp-1229 {
-    .container {
+    @include vp-1229 {
       width: 94%;
-      margin-right: 3%;
-      margin-left: 3%;
+    }
+
+    @include vp-1199 {
+      width: 100%;
     }
   }
 
