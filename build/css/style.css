@@ -245,10 +245,8 @@ button,
   padding: 10px 20px;
   color: #ffffff;
   background-color: #0266c1;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -264,18 +262,11 @@ button,
 .btn:active {
   background-color: #1c3374;
   color: #ffffff;
+  border-color: #1c3374;
 }
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
-}
-@media (hover: hover) {
-  .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-}
-.btn.focus-visible:focus {
-  opacity: 0.8;
 }
 
 .header {
@@ -342,6 +333,12 @@ button,
   }
 }
 
+@media (max-width: 767px) {
+  .header__wrapper-tel {
+    margin-left: auto;
+  }
+}
+
 .header__tel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,7 +376,6 @@ button,
     min-width: 110px;
     height: 14px;
     font-size: 14px;
-    margin-left: auto;
   }
 }
 
@@ -426,7 +422,7 @@ button,
     height: fit-content;
     margin-right: 0;
   }
-  .header.open-menu .header__tel {
+  .header.open-menu .header__wrapper-tel {
     position: absolute;
     top: 42px;
     right: 4.7%;
@@ -494,6 +490,9 @@ button,
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero__swiper-slide::before {
   position: absolute;
@@ -546,7 +545,7 @@ button,
 }
 
 .hero__content {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,11 +556,8 @@ button,
   width: 100%;
   max-width: 1200px;
   min-height: 538px;
-  max-height: 604px;
   color: #ffffff;
   z-index: 1;
-  overflow-y: auto;
-  overflow-x: clip;
 }
 .hero__content h2 {
   width: 100%;
@@ -623,6 +619,7 @@ button,
 @media (max-width: 1199px) {
   .hero__content {
     width: 100%;
+    min-height: 260px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -645,9 +642,6 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .hero__content {
-    max-width: 90.6%;
-  }
   .hero__content h2 {
     font-size: 30px;
   }
@@ -662,10 +656,12 @@ button,
   width: 220px;
   min-height: 58px;
   padding: 21px 10px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1199px) {
   .hero__button {
     width: 206px;
+    margin: 0;
   }
 }
 @media (max-width: 767px) {
@@ -904,8 +900,6 @@ button,
   width: -moz-fit-content;
   width: fit-content;
   padding: 3px 5px;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 .menu a:hover {
   border-bottom: 1px solid currentColor;
@@ -914,6 +908,9 @@ button,
   outline: none;
   padding: 2px 4px;
   border: 1px solid currentColor;
+}
+.menu a:active {
+  border: none;
 }
 
 .menu__toggle {
@@ -2144,9 +2141,6 @@ button.swiper-pagination-bullet {
   background-image: url("../img/svg/arrow-button.svg");
   background-repeat: no-repeat;
 }
-.slider-button:active {
-  background-color: #1c3374;
-}
 .slider-button:hover, .slider-button:focus-visible {
   outline: none;
   background-color: transparent;
@@ -2154,6 +2148,12 @@ button.swiper-pagination-bullet {
 }
 .slider-button:hover::after, .slider-button:focus-visible::after {
   background-image: url("../img/svg/arrow-button-hover.svg");
+}
+.slider-button:active {
+  background-color: #1c3374;
+}
+.slider-button:active::after {
+  background-image: url("../img/svg/arrow-button.svg");
 }
 
 .slider-button.swiper-button-prev {
@@ -3606,8 +3606,20 @@ button.swiper-pagination-bullet {
   }
 }
 
+.photogallery__swiper-wrapper {
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  .photogallery__swiper-wrapper {
+    gap: 3px;
+  }
+}
+
 .photogallery__swiper-slide {
   height: 449px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .photogallery__swiper-slide ul {
   display: -ms-grid;
@@ -3637,6 +3649,9 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
   .photogallery__swiper-slide {
     height: 259px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .photogallery__swiper-slide ul {
     -ms-grid-rows: 103px 153px;
@@ -3769,24 +3784,24 @@ button.swiper-pagination-bullet {
   color: #0266c1;
   opacity: 1;
 }
-.form input:active, .form input:focus-visible {
+.form input:active, .form input:focus-visible, .form input:focus {
   outline: none;
   border-color: #1c3374;
   cursor: pointer;
 }
-.form input:active::-webkit-input-placeholder, .form input:focus-visible::-webkit-input-placeholder {
+.form input:active::-webkit-input-placeholder, .form input:focus-visible::-webkit-input-placeholder, .form input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-.form input:active::-moz-placeholder, .form input:focus-visible::-moz-placeholder {
+.form input:active::-moz-placeholder, .form input:focus-visible::-moz-placeholder, .form input:focus::-moz-placeholder {
   opacity: 0;
 }
-.form input:active:-ms-input-placeholder, .form input:focus-visible:-ms-input-placeholder {
+.form input:active:-ms-input-placeholder, .form input:focus-visible:-ms-input-placeholder, .form input:focus:-ms-input-placeholder {
   opacity: 0;
 }
-.form input:active::-ms-input-placeholder, .form input:focus-visible::-ms-input-placeholder {
+.form input:active::-ms-input-placeholder, .form input:focus-visible::-ms-input-placeholder, .form input:focus::-ms-input-placeholder {
   opacity: 0;
 }
-.form input:active::placeholder, .form input:focus-visible::placeholder {
+.form input:active::placeholder, .form input:focus-visible::placeholder, .form input:focus::placeholder {
   opacity: 0;
 }
 .form input:disabled {
@@ -4585,11 +4600,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-control-layers-toggle {
+  background-image: url(images/layers.png);
   width: 36px;
   height: 36px;
 }
 
 .leaflet-retina .leaflet-control-layers-toggle {
+  background-image: url(images/layers-2x.png);
   background-size: 26px 26px;
 }
 
@@ -4645,7 +4662,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 /* Default icon URLs */
-.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */ }
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+  background-image: url(images/marker-icon.png);
+}
 
 /* attribution and scale controls */
 .leaflet-container .leaflet-control-attribution {

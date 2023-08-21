@@ -43,6 +43,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &::before {
@@ -93,18 +95,14 @@
 }
 
 .hero__content {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
   min-height: 538px;
-  max-height: 604px;
   color: $color-default-white;
   z-index: 1;
-  overflow-y: auto;
-  overflow-x: clip;
-
 
   h2 {
     width: 100%;
@@ -167,6 +165,7 @@
 
   @include vp-1199 {
     width: 100%;
+    min-height: 260px;
     align-items: center;
     max-width: 678px;
     text-align: center;
@@ -190,8 +189,6 @@
   }
 
   @include vp-767 {
-    max-width: 90.6%;
-
     h2 {
       font-size: 30px;
     }
@@ -208,9 +205,11 @@
   width: 220px;
   min-height: 58px;
   padding: 21px 10px;
+  margin-bottom: 20px;
 
   @include vp-1199 {
     width: 206px;
+    margin: 0;
   }
 
   @include vp-767 {

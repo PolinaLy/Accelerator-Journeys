@@ -81,7 +81,8 @@
     }
 
     &:active,
-    &:focus-visible {
+    &:focus-visible,
+    &:focus {
       outline: none;
       border-color: $color-resolution-blue;
       cursor: pointer;

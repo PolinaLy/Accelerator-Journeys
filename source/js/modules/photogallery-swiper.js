@@ -6,20 +6,6 @@ export const initPhotogallerySwiper = function () {
     },
     // отключение скролла
     simulateTouch: false,
-
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 5,
-      },
-      768: {
-        slidesPerView: 2.75,
-        spaceBetween: 5,
-      },
-      1200: {
-        slidesPerView: 5,
-        spaceBetween: 5,
-      },
-    },
+    slidesPerView: 'auto',
   });
 };

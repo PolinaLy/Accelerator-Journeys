@@ -52,6 +52,12 @@
   }
 }
 
+.header__wrapper-tel {
+  @include vp-767 {
+    margin-left: auto;
+  }
+}
+
 .header__tel {
   display: flex;
   align-items: center;
@@ -84,7 +90,6 @@
     min-width: 110px;
     height: 14px;
     font-size: 14px;
-    margin-left: auto;
   }
 }
 
@@ -137,7 +142,7 @@
       margin-right: 0;
     }
 
-    .header__tel {
+    .header__wrapper-tel {
       position: absolute;
       top: 42px;
       right: 4.7%;

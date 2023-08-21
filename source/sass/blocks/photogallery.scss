@@ -97,8 +97,17 @@
   }
 }
 
+.photogallery__swiper-wrapper {
+  gap: 5px;
+
+  @include vp-767 {
+    gap: 3px;
+  }
+}
+
 .photogallery__swiper-slide {
   height: 449px;
+  width: fit-content;
 
   ul {
     display: grid;
@@ -125,6 +134,7 @@
 
   @include vp-767 {
     height: 259px;
+    width: fit-content;
 
     ul {
       grid-template-rows: 103px 153px;

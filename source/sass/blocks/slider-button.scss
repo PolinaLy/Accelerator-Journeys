@@ -18,10 +18,6 @@
     background-repeat: no-repeat;
   }
 
-  &:active {
-    background-color: $color-resolution-blue;
-  }
-
   &:hover,
   &:focus-visible {
     outline: none;
@@ -30,6 +26,14 @@
 
     &::after {
       background-image: url("../img/svg/arrow-button-hover.svg");
+    }
+  }
+
+  &:active {
+    background-color: $color-resolution-blue;
+
+    &::after {
+      background-image: url("../img/svg/arrow-button.svg");
     }
   }
 }
